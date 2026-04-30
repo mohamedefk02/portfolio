@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<nav th:fragment="navbar">
+    <div class="nav-container">
+        <div class="logo">
+            <img src="/images/F.png" alt="MF Logo" height="50">
+        </div>
+
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav-links">
+            <i class="bx bx-menu"></i>
+        </button>
+
+        <div class="nav-links" id="site-nav-links">
+            <a th:href="@{/#home}" href="/#home">Home</a>
+            <a th:href="@{/#about}" href="/#about">About</a>
+            <a th:href="@{/#skills}" href="/#skills">Skills</a>
+            <a th:href="@{/#projects}" href="/#projects">Projects</a>
+            <a th:href="@{/#contact}" href="/#contact">Contact</a>
+        </div>
+    </div>
+</nav>
+</body>
+</html>
