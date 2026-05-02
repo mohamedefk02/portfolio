@@ -174,7 +174,7 @@ const seededProjects: Project[] = [
       "Firebase Storage",
       "Glide",
     ],
-    image: "/images/Weball_V1.png",
+    image: "/images/WeBall_V1.png",
     githubUrl: "https://github.com/mohamedefk02/weball-v1",
     type: "mobile",
   },
