@@ -147,7 +147,7 @@ const seededProjects: Project[] = [
       "Glide",
       "Google Maps SDK for Android",
     ],
-    image: "/images/Weball_V2.png",
+    image: "/images/WeBall_V2.png",
     githubUrl: "https://github.com/mohamedefk02/weball-v2",
     type: "mobile",
   },
