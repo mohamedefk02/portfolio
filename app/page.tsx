@@ -10,7 +10,7 @@ export default async function Page({
 }) {
   const params = await searchParams;
   const sent = params.sent;
-  const contactStatus = sent ? "Message sent - thank you!" : undefined;
+  const contactStatus = sent ? "Message sent. No stack trace required." : undefined;
 
   return (
     <HomePage

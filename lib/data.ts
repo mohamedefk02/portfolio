@@ -29,6 +29,25 @@ const seededProjects: Project[] = [
     type: "mobile",
   },
   {
+    title: "Association Website - Event Management and Admin Operations",
+    description:
+      "A full-stack web platform for a community association, with my contribution focused on the upcoming events experience, the interactive map, and the internal admin workflows. As team leader, I also drove coordination while implementing the event listing and detail flows plus the admin panels for volunteers, participants, and events.",
+    impact:
+      "It helped the association present upcoming activities clearly and manage registrations and volunteer operations from one centralized interface.",
+    highlights: [
+      "Led the project as team leader while owning the upcoming events section of the public website.",
+      "Built the event details and registration flow, including participant submission and event-specific volunteer application paths.",
+      "Implemented the admin panels for volunteers, participants, and events, with approval, decline, create, update, and delete workflows.",
+      "Added event occupancy tracking in the admin and public views using registered-versus-capacity data from the backend.",
+      "Integrated the map section into the public site to support location-oriented presentation of the association.",
+    ],
+    techStack: ["React", "TypeScript", "Vite", "Tailwind CSS", "Spring Boot", "Spring Data JPA", "PostgreSQL", "Docker"],
+    image: "/images/aspivot.png",
+    githubUrl: null,
+    isInDevelopment: true,
+    type: "web",
+  },
+  {
     title: "SmartShop - Mobile E-Commerce Catalog and Inventory Manager",
     description:
       "SmartShop is a Flutter mobile app for browsing a product catalog, viewing product details, managing a cart, and saving favorites. It combines bundled JSON product data, on-device SQLite persistence, and HTTP-based CRUD flows for managing remote inventory from the same interface.",
@@ -100,25 +119,6 @@ const seededProjects: Project[] = [
     image: "/images/sptool.png",
     githubUrl: "https://github.com/mohamedefk02/Snapshot_Recover",
     type: "desktop",
-  },
-  {
-    title: "Association Website - Event Management and Admin Operations",
-    description:
-      "A full-stack web platform for a community association, with my contribution focused on the upcoming events experience, the interactive map, and the internal admin workflows. As team leader, I also drove coordination while implementing the event listing and detail flows plus the admin panels for volunteers, participants, and events.",
-    impact:
-      "It helped the association present upcoming activities clearly and manage registrations and volunteer operations from one centralized interface.",
-    highlights: [
-      "Led the project as team leader while owning the upcoming events section of the public website.",
-      "Built the event details and registration flow, including participant submission and event-specific volunteer application paths.",
-      "Implemented the admin panels for volunteers, participants, and events, with approval, decline, create, update, and delete workflows.",
-      "Added event occupancy tracking in the admin and public views using registered-versus-capacity data from the backend.",
-      "Integrated the map section into the public site to support location-oriented presentation of the association.",
-    ],
-    techStack: ["React", "TypeScript", "Vite", "Tailwind CSS", "Spring Boot", "Spring Data JPA", "PostgreSQL", "Docker"],
-    image: "/images/aspivot.png",
-    githubUrl: null,
-    isInDevelopment: true,
-    type: "web",
   },
   {
     title: "WeBall Match Organizer Android App",
