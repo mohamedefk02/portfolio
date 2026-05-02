@@ -127,7 +127,7 @@ function ContactSection({ contactStatus }: { contactStatus?: string }) {
             <i className="bx bx-phone-call" />
             <div>
               <h4>Phone</h4>
-              <a href="tel:+2126630202936">+212 630202936</a>
+              <a href="tel:+212630202936">+212 630202936</a>
             </div>
           </div>
           <div className="info-item">
