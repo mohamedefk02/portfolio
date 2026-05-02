@@ -49,6 +49,65 @@ function CurrentFocusSection() {
   );
 }
 
+function ExperienceSection() {
+  const experiences = [
+    {
+  title: "Mobile App Developer Intern",
+  company: "Enjaz COM",
+  period: "May 2024 - Jun 2024",
+  mode: "Remote",
+  points: [
+    "Worked on Android application features, improving performance and responsiveness",
+    "Identified and fixed bottlenecks in code and app behavior",
+    "Contributed to UI components and user interactions for better usability",
+    "Participated in code reviews and followed clean coding practices",
+  ],
+},
+{
+  title: "Technical Support Intern",
+  company: "WeQuest",
+  period: "Jul 2023 - Aug 2023",
+  mode: "Hybrid",
+  points: [
+    "Provided technical support by diagnosing and resolving software and system issues",
+    "Handled day-to-day troubleshooting, reducing recurring problems for staff",
+    "Organized and maintained files, reports, and system data",
+    "Learned to debug real-world issues where the problem is rarely obvious",
+  ],
+}
+  ];
+
+  return (
+    <section id="experience" className="section">
+      <h2 className="section-title">Experience</h2>
+      <p className="subtitle">The roles where I learned by building, fixing, and handling real-world issues.</p>
+
+      <div className="experience-grid">
+        {experiences.map((experience) => (
+          <article key={`${experience.company}-${experience.title}`} className="experience-card">
+            <div className="experience-card-header">
+              <div>
+                <h3>{experience.title}</h3>
+                <p className="experience-company">{experience.company}</p>
+              </div>
+              <div className="experience-meta">
+                <span>{experience.period}</span>
+                <span>{experience.mode}</span>
+              </div>
+            </div>
+
+            <ul className="experience-points">
+              {experience.points.map((point) => (
+                <li key={point}>{point}</li>
+              ))}
+            </ul>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 function ContactSection({ contactStatus }: { contactStatus?: string }) {
   return (
     <section id="contact" className="section contact-section">
@@ -251,10 +310,9 @@ export function HomePage({
           </div>
         </section>
 
-        
+        <ExperienceSection />
         <SkillsSection skillCategories={skillCategories} />
         <ProjectsSection projects={projects} />
-        <CurrentFocusSection />
         <ContactSection contactStatus={contactStatus} />
       </>
     </ClientShell>
