@@ -4,6 +4,11 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Portfolio - Mohamed El Fankari",
   description: "Portfolio of Mohamed El Fankari, software engineering student.",
+  icons: {
+    icon: "/favicon-v2.ico",
+    shortcut: "/favicon-v2.ico",
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({
