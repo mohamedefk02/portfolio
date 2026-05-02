@@ -7,7 +7,7 @@ function SkillsSection({ skillCategories }: { skillCategories: SkillCategory[] }
   return (
     <section id="skills" className="section fade-in">
       <h2 className="section-title">Skills</h2>
-      <p className="subtitle">My Tech Toolbox</p>
+      <p className="subtitle">The tools I reach for when it's time to build, debug, and ship.</p>
 
       <div className="skills-main-grid">
         {skillCategories.map((category) => (
@@ -31,11 +31,29 @@ function SkillsSection({ skillCategories }: { skillCategories: SkillCategory[] }
   );
 }
 
+function CurrentFocusSection() {
+  return (
+    <section id="focus" className="section">
+      <h2 className="section-title">Current Focus</h2>
+      <p className="subtitle">What I&apos;m working on when I&apos;m not pretending one small fix won&apos;t affect five files.</p>
+
+      <div className="about-data" style={{ maxWidth: 820, margin: "0 auto" }}>
+        <p className="about-description">
+          Right now, I&apos;m focused on building stronger full-stack applications, getting sharper on backend design,
+          and making interfaces feel clean without feeling generic. I like projects that have real behavior behind
+          them: state, edge cases, admin flows, APIs, mobile interactions, and the kind of bugs that only show up
+          after you say, &quot;it should be fine.&quot;
+        </p>
+      </div>
+    </section>
+  );
+}
+
 function ContactSection({ contactStatus }: { contactStatus?: string }) {
   return (
     <section id="contact" className="section contact-section">
-      <h2 className="section-title">Contact Me</h2>
-      <p className="subtitle">Let's Create Something Together</p>
+      <h2 className="section-title">Contact</h2>
+      <p className="subtitle">If my work looks like your kind of chaos, let&apos;s talk.</p>
 
       <div className="contact-container">
         <div className="contact-info">
@@ -43,14 +61,14 @@ function ContactSection({ contactStatus }: { contactStatus?: string }) {
             <i className="bx bx-envelope" />
             <div>
               <h4>Email</h4>
-              <a href="mailto:me@example.com">melfankari@gmail.com</a>
+              <a href="mailto:melfankari@gmail.com">melfankari@gmail.com</a>
             </div>
           </div>
           <div className="info-item">
             <i className="bx bx-phone-call" />
             <div>
               <h4>Phone</h4>
-              <a href="tel:+212600000000">+212 630202936</a>
+              <a href="tel:+2126630202936">+212 630202936</a>
             </div>
           </div>
           <div className="info-item">
@@ -73,7 +91,7 @@ function ContactSection({ contactStatus }: { contactStatus?: string }) {
             <textarea name="message" rows={5} placeholder="Your Message" required />
           </div>
           <button type="submit" className="btn-send">
-            Send Message <i className="bx bx-send" />
+            Send message <i className="bx bx-send" />
           </button>
           {contactStatus ? <p className="contact-status">{contactStatus}</p> : null}
         </form>
@@ -119,17 +137,18 @@ export function HomePage({
 
                 <div className="hero-title-wrapper">
                   <span className="title-line" />
-                  <p className="hero-subtitle">Software Engineering Student</p>
+                  <p className="hero-subtitle">Software Engineering Student • Web & Mobile Developer</p>
                 </div>
 
                 <p className="hero-description">
-                  I'm a 4th-year Software Engineering student with a background in Web and Mobile Development,
-                  passionate about building reliable and user-friendly applications. This portfolio showcases my
-                  projects, skills, and journey in creating impactful digital solutions.
+                  I’m a 4th-year Software Engineering student with a background in Web and Mobile Development, I build applications, break them, fix them, and then break them again just to be sure.
+                  <br />
+                  This portfolio is a collection of that process:
+                  projects that survived, skills I picked up, and lessons learned the hard way.
                 </p>
 
                 <a href="#contact" className="btn-say-hello">
-                  Contact Me
+                  Say hello
                 </a>
               </div>
             </div>
@@ -144,7 +163,7 @@ export function HomePage({
 
         <section id="about" className="section">
           <h2 className="section-title">About Me</h2>
-          <p className="subtitle">My Introduction</p>
+          <p className="subtitle">A quick introduction.</p>
 
           <div className="about-container">
             <div className="about-img-box">
@@ -164,12 +183,13 @@ export function HomePage({
                 </div>
               </div>
               <p className="about-description">
-                Curiosity has always been my compass, guiding me toward exploring new technologies and understanding
-                how things work under the hood. Over time, this curiosity evolved into a passion for building software
-                that is both practical and elegant. As a web and mobile development student, I focus on creating
-                applications that are intuitive, efficient, and reliable. I'm constantly learning, experimenting with
-                different tools and languages, and challenging myself with new technical problems. For me, coding
-                isn't just about writing programs - it's about shaping experiences and solving real-world challenges.
+                I started out curious about how software actually works under the hood, and that curiosity naturally turned into building things myself. Over time, that evolved into working across web, mobile, and backend development, where I enjoy taking ideas from concept to something real and usable.
+                <br />
+                <br />
+                I’ve learned that understanding why something works is just as important as getting it to work in the first place. That mindset usually comes with a bit of trial and error — broken builds, unexpected behavior, and a fair amount of debugging.
+                <br />
+                <br />
+                But that process is what I enjoy most. Each issue forces me to look deeper, rethink the approach, and improve the solution. Eventually, things come together into something more stable, more thoughtful, and closer to what was originally intended.
               </p>
             </div>
           </div>
@@ -177,7 +197,7 @@ export function HomePage({
 
         <section id="education" className="section">
           <h2 className="section-title">Education</h2>
-          <p className="subtitle">My Academic Journey</p>
+          <p className="subtitle">The path from &quot;I like tech&quot; to &quot;let me check the logs.&quot;</p>
           <div className="section-spacer" />
 
           <div className="timeline-horizontal">
@@ -231,8 +251,10 @@ export function HomePage({
           </div>
         </section>
 
+        
         <SkillsSection skillCategories={skillCategories} />
         <ProjectsSection projects={projects} />
+        <CurrentFocusSection />
         <ContactSection contactStatus={contactStatus} />
       </>
     </ClientShell>
