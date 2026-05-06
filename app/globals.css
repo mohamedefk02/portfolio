@@ -112,6 +112,12 @@ nav .nav-container {
   align-items: center;
 }
 
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 nav .logo {
   font-size: 1.5rem;
   font-weight: bold;

@@ -62,16 +62,18 @@ export function ClientShell({ children }: { children: React.ReactNode }) {
             </a>
           </div>
 
-          <button
-            className="nav-toggle"
-            type="button"
-            aria-label="Toggle navigation"
-            aria-expanded={menuOpen}
-            aria-controls="site-nav-links"
-            onClick={() => setMenuOpen((value) => !value)}
-          >
-            <i className={menuOpen ? "bx bx-x" : "bx bx-menu"} />
-          </button>
+          <div className="nav-actions">
+            <LanguageSwitcher />
+            <button
+              className="nav-toggle"
+              aria-label="Toggle navigation"
+              aria-expanded={menuOpen}
+              aria-controls="site-nav-links"
+              onClick={() => setMenuOpen((value) => !value)}
+            >
+              <i className={menuOpen ? "bx bx-x" : "bx bx-menu"} />
+            </button>
+          </div>
 
           <div className="nav-links" id="site-nav-links">
             <a href="/#home">{t("nav.home")}</a>
@@ -80,7 +82,6 @@ export function ClientShell({ children }: { children: React.ReactNode }) {
             <a href="/#skills">{t("nav.skills")}</a>
             <a href="/#about">{t("nav.about")}</a>
             <a href="/#contact">{t("nav.contact")}</a>
-            <LanguageSwitcher />
           </div>
         </div>
       </nav>
