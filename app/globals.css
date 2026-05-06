@@ -149,6 +149,7 @@ nav .nav-links a {
   font-weight: 500;
   color: #222;
   transition: color 0.3s;
+  white-space: nowrap;
 }
 
 nav .nav-links a:hover {
@@ -336,6 +337,10 @@ h2 {
   font-size: 1.1rem;
 }
 
+section#about {
+  padding: 160px 10%;
+}
+
 .about-container {
   display: flex;
   flex-wrap: wrap;
@@ -343,7 +348,7 @@ h2 {
   gap: 4rem;
   max-width: 1100px;
   margin: 0 auto;
-  padding: 2rem 0;
+  padding: 4rem 0;
 }
 
 .about-img-box {
@@ -935,6 +940,74 @@ h2 {
   color: #555;
 }
 
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 32px;
+  padding: 20px 0;
+}
+
+.pagination-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  border-radius: 8px;
+  background: #fff;
+  color: #52525b;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pagination-btn:hover:not(:disabled) {
+  background: #f8f8f8;
+  border-color: rgba(191, 164, 111, 0.3);
+  color: #9a4d2f;
+}
+
+.pagination-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination-pages {
+  display: flex;
+  gap: 8px;
+}
+
+.pagination-page {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  border-radius: 8px;
+  background: #fff;
+  color: #52525b;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pagination-page:hover {
+  background: #f8f8f8;
+  border-color: rgba(191, 164, 111, 0.3);
+  color: #9a4d2f;
+}
+
+.pagination-page.is-active {
+  background: #bfa46f;
+  border-color: #bfa46f;
+  color: #fff;
+}
+
 .experience-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1240,7 +1313,7 @@ footer {
     display: none;
     flex-direction: column;
     align-items: stretch;
-    gap: 8px;
+    gap: 12px;
     padding: 14px;
     background: rgba(255, 255, 255, 0.96);
     border: 1px solid rgba(34, 34, 34, 0.08);

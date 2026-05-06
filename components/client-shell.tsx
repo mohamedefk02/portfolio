@@ -2,11 +2,16 @@
 
 import { useEffect, useState } from "react";
 
+import { useTranslation } from "./i18n/language-context";
+import { LanguageSwitcher } from "./language-switcher";
+
 export function ClientShell({ children }: { children: React.ReactNode }) {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const sections = document.querySelectorAll("section");
+    // ... rest of useEffect
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -69,12 +74,13 @@ export function ClientShell({ children }: { children: React.ReactNode }) {
           </button>
 
           <div className="nav-links" id="site-nav-links">
-            <a href="/#home">Home</a>
-            <a href="/#projects">Projects</a>
-            <a href="/#experience">Experience</a>
-            <a href="/#skills">Skills</a>
-            <a href="/#about">About</a>
-            <a href="/#contact">Contact</a>
+            <a href="/#home">{t("nav.home")}</a>
+            <a href="/#projects">{t("nav.projects")}</a>
+            <a href="/#experience">{t("nav.experience")}</a>
+            <a href="/#skills">{t("nav.skills")}</a>
+            <a href="/#about">{t("nav.about")}</a>
+            <a href="/#contact">{t("nav.contact")}</a>
+            <LanguageSwitcher />
           </div>
         </div>
       </nav>
@@ -83,7 +89,7 @@ export function ClientShell({ children }: { children: React.ReactNode }) {
 
       <footer className="footer-section">
         <div className="footer-container">
-          <p>&copy; 2026 Mohamed El Fankari. All Rights Reserved.</p>
+          <p>&copy; 2026 Mohamed El Fankari. {t("footer.rights")}</p>
           <div className="footer-icons">
             <a href="https://github.com/mohamedefk02" className="icon-secondary" target="_blank" rel="noreferrer">
               <i className="bx bxl-github" />

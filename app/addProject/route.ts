@@ -12,6 +12,7 @@ export async function POST(request: Request) {
     const project = parseAddProjectForm(formData);
     addProject({
       ...project,
+      id: project.title.toLowerCase().replace(/ /g, "-").replace(/[^\w-]/g, ""),
       impact: "",
       highlights: [],
       techStack: [],

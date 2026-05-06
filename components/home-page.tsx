@@ -1,18 +1,22 @@
+"use client";
+
+import { useTranslation } from "./i18n/language-context";
 import { ClientShell } from "@/components/client-shell";
 import { ProjectsSection } from "@/components/projects-section";
 import { SkillIcon } from "@/components/skill-icon";
 import type { Project, SkillCategory } from "@/lib/types";
 
 function SkillsSection({ skillCategories }: { skillCategories: SkillCategory[] }) {
+  const { t } = useTranslation();
   return (
     <section id="skills" className="section fade-in">
-      <h2 className="section-title">Skills</h2>
-      <p className="subtitle">The tools I reach for when it's time to build, debug, and ship.</p>
+      <h2 className="section-title">{t("skills.title")}</h2>
+      <p className="subtitle">{t("skills.subtitle")}</p>
 
       <div className="skills-main-grid">
         {skillCategories.map((category) => (
           <div key={category.name} className="skill-category-card">
-            <h3>{category.name}</h3>
+            <h3>{t(`skills.categories.${category.name.toLowerCase().replace(/ & /g, "_").replace(/ /g, "_")}`) || category.name}</h3>
             <div className="tech-grid">
               {category.items.map((item) => (
                 <div key={`${category.name}-${item.name}`} className="tech-item">
@@ -32,17 +36,15 @@ function SkillsSection({ skillCategories }: { skillCategories: SkillCategory[] }
 }
 
 function CurrentFocusSection() {
+  const { t } = useTranslation();
   return (
     <section id="focus" className="section">
-      <h2 className="section-title">Current Focus</h2>
-      <p className="subtitle">What I&apos;m working on when I&apos;m not pretending one small fix won&apos;t affect five files.</p>
+      <h2 className="section-title">{t("focus.title")}</h2>
+      <p className="subtitle">{t("focus.subtitle")}</p>
 
       <div className="about-data" style={{ maxWidth: 820, margin: "0 auto" }}>
         <p className="about-description">
-          Right now, I&apos;m focused on building stronger full-stack applications, getting sharper on backend design,
-          and making interfaces feel clean without feeling generic. I like projects that have real behavior behind
-          them: state, edge cases, admin flows, APIs, mobile interactions, and the kind of bugs that only show up
-          after you say, &quot;it should be fine.&quot;
+          {t("focus.description")}
         </p>
       </div>
     </section>
@@ -50,40 +52,16 @@ function CurrentFocusSection() {
 }
 
 function ExperienceSection() {
-  const experiences = [
-    {
-  title: "Mobile App Developer Intern",
-  company: "Enjaz COM",
-  period: "May 2024 - Jun 2024",
-  mode: "Remote",
-  points: [
-    "Worked on Android application features, improving performance and responsiveness",
-    "Identified and fixed bottlenecks in code and app behavior",
-    "Contributed to UI components and user interactions for better usability",
-    "Participated in code reviews and followed clean coding practices",
-  ],
-},
-{
-  title: "Technical Support Intern",
-  company: "WeQuest",
-  period: "Jul 2023 - Aug 2023",
-  mode: "Hybrid",
-  points: [
-    "Provided technical support by diagnosing and resolving software and system issues",
-    "Handled day-to-day troubleshooting, reducing recurring problems for staff",
-    "Organized and maintained files, reports, and system data",
-    "Learned to debug real-world issues where the problem is rarely obvious",
-  ],
-}
-  ];
+  const { t } = useTranslation();
+  const experiences = t("experience.internships");
 
   return (
     <section id="experience" className="section">
-      <h2 className="section-title">Experience</h2>
-      <p className="subtitle">The roles where I learned by building, fixing, and handling real-world issues.</p>
+      <h2 className="section-title">{t("experience.title")}</h2>
+      <p className="subtitle">{t("experience.subtitle")}</p>
 
       <div className="experience-grid">
-        {experiences.map((experience) => (
+        {experiences.map((experience: any) => (
           <article key={`${experience.company}-${experience.title}`} className="experience-card">
             <div className="experience-card-header">
               <div>
@@ -97,7 +75,7 @@ function ExperienceSection() {
             </div>
 
             <ul className="experience-points">
-              {experience.points.map((point) => (
+              {experience.points.map((point: string) => (
                 <li key={point}>{point}</li>
               ))}
             </ul>
@@ -109,48 +87,49 @@ function ExperienceSection() {
 }
 
 function ContactSection({ contactStatus }: { contactStatus?: string }) {
+  const { t } = useTranslation();
   return (
     <section id="contact" className="section contact-section">
-      <h2 className="section-title">Contact</h2>
-      <p className="subtitle">If my work looks like your kind of chaos, let&apos;s talk.</p>
+      <h2 className="section-title">{t("contact.title")}</h2>
+      <p className="subtitle">{t("contact.subtitle")}</p>
 
       <div className="contact-container">
         <div className="contact-info">
           <div className="info-item">
             <i className="bx bx-envelope" />
             <div>
-              <h4>Email</h4>
+              <h4>{t("contact.email")}</h4>
               <a href="mailto:melfankari@gmail.com">melfankari@gmail.com</a>
             </div>
           </div>
           <div className="info-item">
             <i className="bx bx-phone-call" />
             <div>
-              <h4>Phone</h4>
+              <h4>{t("contact.phone")}</h4>
               <a href="tel:+212630202936">+212 630202936</a>
             </div>
           </div>
           <div className="info-item">
             <i className="bx bx-map" />
             <div>
-              <h4>Location</h4>
-              <p>Morocco, Marrakesh</p>
+              <h4>{t("contact.location")}</h4>
+              <p>{t("contact.location_val")}</p>
             </div>
           </div>
         </div>
 
         <form className="contact-form" action="/contact" method="POST">
           <div className="form-group">
-            <input type="text" name="name" placeholder="Your Name" required />
+            <input type="text" name="name" placeholder={t("contact.form.name")} required />
           </div>
           <div className="form-group">
-            <input type="email" name="email" placeholder="Your Email" required />
+            <input type="email" name="email" placeholder={t("contact.form.email")} required />
           </div>
           <div className="form-group">
-            <textarea name="message" rows={5} placeholder="Your Message" required />
+            <textarea name="message" rows={5} placeholder={t("contact.form.message")} required />
           </div>
           <button type="submit" className="btn-send">
-            Send message <i className="bx bx-send" />
+            {t("contact.form.send")} <i className="bx bx-send" />
           </button>
           {contactStatus ? <p className="contact-status">{contactStatus}</p> : null}
         </form>
@@ -168,6 +147,7 @@ export function HomePage({
   skillCategories: SkillCategory[];
   contactStatus?: string;
 }) {
+  const { t } = useTranslation();
   return (
     <ClientShell>
       <>
@@ -196,18 +176,20 @@ export function HomePage({
 
                 <div className="hero-title-wrapper">
                   <span className="title-line" />
-                  <p className="hero-subtitle">Software Engineering Student • Web & Mobile Developer</p>
+                  <p className="hero-subtitle">{t("hero.title")}</p>
                 </div>
 
                 <p className="hero-description">
-                  I’m a 4th-year Software Engineering student with a background in Web and Mobile Development, I build applications, break them, fix them, and then break them again just to be sure.
-                  <br />
-                  This portfolio is a collection of that process:
-                  projects that survived, skills I picked up, and lessons learned the hard way.
+                  {t("hero.description").split("\n").map((line: string, i: number) => (
+                    <span key={i}>
+                      {line}
+                      <br />
+                    </span>
+                  ))}
                 </p>
 
                 <a href="#contact" className="btn-say-hello">
-                  Say hello
+                  {t("hero.cta")}
                 </a>
               </div>
             </div>
@@ -221,8 +203,8 @@ export function HomePage({
         </section>
 
         <section id="about" className="section">
-          <h2 className="section-title">About Me</h2>
-          <p className="subtitle">A quick introduction.</p>
+          <h2 className="section-title">{t("about.title")}</h2>
+          <p className="subtitle">{t("about.subtitle")}</p>
 
           <div className="about-container">
             <div className="about-img-box">
@@ -232,42 +214,41 @@ export function HomePage({
               <div className="about-info-grid">
                 <div className="about-card no-hover">
                   <i className="bx bx-award about__icon" />
-                  <h3 className="about-card-title">Experience</h3>
-                  <span className="about-card-subtitle">3+ Years</span>
+                  <h3 className="about-card-title">{t("about.experience")}</h3>
+                  <span className="about-card-subtitle">{t("about.experience_sub")}</span>
                 </div>
                 <div className="about-card no-hover">
                   <i className="bx bx-support about__icon" />
-                  <h3 className="about-card-title">Support</h3>
-                  <span className="about-card-subtitle">Online 24/7</span>
+                  <h3 className="about-card-title">{t("about.support")}</h3>
+                  <span className="about-card-subtitle">{t("about.support_sub")}</span>
                 </div>
               </div>
               <p className="about-description">
-                I started out curious about how software actually works under the hood, and that curiosity naturally turned into building things myself. Over time, that evolved into working across web, mobile, and backend development, where I enjoy taking ideas from concept to something real and usable.
-                <br />
-                <br />
-                I’ve learned that understanding why something works is just as important as getting it to work in the first place. That mindset usually comes with a bit of trial and error — broken builds, unexpected behavior, and a fair amount of debugging.
-                <br />
-                <br />
-                But that process is what I enjoy most. Each issue forces me to look deeper, rethink the approach, and improve the solution. Eventually, things come together into something more stable, more thoughtful, and closer to what was originally intended.
+                {t("about.description").split("\n\n").map((para: string, i: number) => (
+                  <span key={i}>
+                    {para}
+                    {i < t("about.description").split("\n\n").length - 1 && <><br /><br /></>}
+                  </span>
+                ))}
               </p>
             </div>
           </div>
         </section>
 
         <section id="education" className="section">
-          <h2 className="section-title">Education</h2>
-          <p className="subtitle">The path from &quot;I like tech&quot; to &quot;let me check the logs.&quot;</p>
+          <h2 className="section-title">{t("education.title")}</h2>
+          <p className="subtitle">{t("education.subtitle")}</p>
           <div className="section-spacer" />
 
           <div className="timeline-horizontal">
             <div className="timeline-item">
               <div className="timeline-dot" />
               <div className="timeline-content">
-                <h3>Abtih High School</h3>
+                <h3>{t("education.schools.high_school.name")}</h3>
                 <p>
-                  Baccalaureat, Science Physique - Option Francais
+                  {t("education.schools.high_school.degree")}
                   <br />
-                  <small>Sep 2020 - Jun 2021</small>
+                  <small>{t("education.schools.high_school.date")}</small>
                 </p>
               </div>
             </div>
@@ -275,11 +256,11 @@ export function HomePage({
             <div className="timeline-item">
               <div className="timeline-dot" />
               <div className="timeline-content">
-                <h3>FSJES</h3>
+                <h3>{t("education.schools.fsjes.name")}</h3>
                 <p>
-                  First year in Bachelor in Economy
+                  {t("education.schools.fsjes.degree")}
                   <br />
-                  <small>Sep 2021 - Jun 2022</small>
+                  <small>{t("education.schools.fsjes.date")}</small>
                 </p>
               </div>
             </div>
@@ -287,11 +268,11 @@ export function HomePage({
             <div className="timeline-item">
               <div className="timeline-dot" />
               <div className="timeline-content">
-                <h3>Higher School of Technology - EST</h3>
+                <h3>{t("education.schools.est.name")}</h3>
                 <p>
-                  DUT - Web & Mobile Application Developer
+                  {t("education.schools.est.degree")}
                   <br />
-                  <small>Sep 2022 - Jun 2024</small>
+                  <small>{t("education.schools.est.date")}</small>
                 </p>
               </div>
             </div>
@@ -299,11 +280,11 @@ export function HomePage({
             <div className="timeline-item">
               <div className="timeline-dot" />
               <div className="timeline-content">
-                <h3>ENIAD</h3>
+                <h3>{t("education.schools.eniad.name")}</h3>
                 <p>
-                  Software Engineering Degree
+                  {t("education.schools.eniad.degree")}
                   <br />
-                  <small>Sep 2024 - Present</small>
+                  <small>{t("education.schools.eniad.date")}</small>
                 </p>
               </div>
             </div>

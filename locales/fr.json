@@ -1,0 +1,244 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "projects": "Projets",
+    "experience": "Expérience",
+    "skills": "Compétences",
+    "about": "À propos",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Étudiant en Ingénierie Logicielle • Développeur Web & Mobile",
+    "description": "Étudiant en 4ème année de Génie Logiciel avec un penchant pour le Web et le Mobile. Je construis des applications, je les casse, je les répare, et je les recasse juste pour être sûr.\nCe portfolio est le reflet de ce processus : des projets qui ont survécu, des compétences acquises sur le tas et des leçons apprises à la dure.",
+    "cta": "Dites bonjour"
+  },
+  "about": {
+    "title": "À propos de moi",
+    "subtitle": "Une courte introduction.",
+    "experience": "Expérience",
+    "experience_sub": "3+ Ans",
+    "support": "Support",
+    "support_sub": "En ligne 24/7",
+    "description": "Tout a commencé par une simple curiosité : comprendre comment les logiciels fonctionnent réellement sous le capot. Cette curiosité s'est naturellement transformée en un besoin de construire mes propres outils. Au fil du temps, j'ai évolué vers le développement web, mobile et backend, où j'aime transformer une idée abstraite en quelque chose de concret et d'utilisable.\n\nJ'ai appris que comprendre *pourquoi* quelque chose fonctionne est tout aussi crucial que de le faire fonctionner. Cet état d'esprit s'accompagne souvent d'une bonne dose d'essais et d'erreurs — des builds qui plantent, des comportements imprévus et pas mal d'heures de debugging.\n\nMais c'est précisément ce processus qui me passionne. Chaque bug me force à creuser plus loin, à repenser l'approche et à affiner la solution. Au final, les morceaux s'assemblent pour créer quelque chose de plus stable, de plus réfléchi et de plus proche de l'intention initiale."
+  },
+  "education": {
+    "title": "Éducation",
+    "subtitle": "Le chemin entre « J'aime la tech » et « Laisse-moi vérifier les logs. »",
+    "schools": {
+      "high_school": {
+        "name": "Lycée Abtih",
+        "degree": "Baccalauréat, Sciences Physiques - Option Français",
+        "date": "Sep 2020 - Juin 2021"
+      },
+      "est": {
+        "name": "École Supérieure de Technologie - EST",
+        "degree": "DUT - Développeur d'Applications Web & Mobiles",
+        "date": "Sep 2022 - Juin 2024"
+      },
+      "fsjes": {
+        "name": "FSJES",
+        "degree": "Première année de Licence en Économie",
+        "date": "Sep 2021 - Juin 2022"
+      },
+      "eniad": {
+        "name": "ENIAD",
+        "degree": "Diplôme d'Ingénieur d'État en Génie Logiciel",
+        "date": "Sep 2024 - Présent"
+      }
+    }
+  },
+  "experience": {
+    "title": "Expérience",
+    "subtitle": "Les rôles où j'ai appris en construisant, en réparant et en gérant des problèmes réels.",
+    "internships": [
+      {
+        "title": "Stagiaire Développeur Mobile",
+        "company": "Enjaz COM",
+        "period": "Mai 2024 - Juin 2024",
+        "mode": "À distance",
+        "points": [
+          "Développement de fonctionnalités pour application Android, optimisation des performances et de la réactivité",
+          "Identification et résolution des goulots d'étranglement dans le code et le comportement de l'app",
+          "Contribution aux composants UI et aux interactions utilisateurs pour une meilleure ergonomie",
+          "Participation aux revues de code et application des bonnes pratiques de Clean Code"
+        ]
+      },
+      {
+        "title": "Stagiaire Support Technique",
+        "company": "WeQuest",
+        "period": "Juil 2023 - Août 2023",
+        "mode": "Hybride",
+        "points": [
+          "Support technique via le diagnostic et la résolution de problèmes logiciels et systèmes",
+          "Maintenance et dépannage quotidien, réduisant les problèmes récurrents pour le personnel",
+          "Organisation et gestion des fichiers, rapports et données système",
+          "Apprentissage du débugging en conditions réelles, là où la solution est rarement évidente"
+        ]
+      }
+    ]
+  },
+  "focus": {
+    "title": "Focus Actuel",
+    "subtitle": "Ce sur quoi je bosse quand je ne prétends pas qu'un petit fix n'impactera pas cinq fichiers d'un coup.",
+    "description": "En ce moment, je me concentre sur la création d'applications full-stack plus robustes, le perfectionnement du design backend et la conception d'interfaces épurées sans être génériques. J'aime les projets qui ont du répondant : gestion d'états complexes, cas limites, flux d'administration, API, interactions mobiles... et ce genre de bugs qui n'apparaissent qu'après avoir dit : « Normalement, ça devrait être bon. »"
+  },
+  "skills": {
+    "title": "Compétences",
+    "subtitle": "Les outils que je saisis quand il est temps de construire, débugger et déployer.",
+    "categories": {
+      "programming_languages": "Langages de Programmation",
+      "frameworks_libraries": "Frameworks & Bibliothèques",
+      "databases": "Bases de Données",
+      "tools_technologies": "Outils & Technologies"
+    }
+  },
+  "projects": {
+    "title": "Projets",
+    "subtitle": "Une sélection de réalisations, certaines pour résoudre un problème, d'autres juste pour voir si j'en étais capable.",
+    "all": "Tous",
+    "empty": "Aucun projet dans cette catégorie pour le moment.",
+    "view_details": "Voir de plus près",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "view_github": "Voir sur GitHub",
+    "back_to_projects": "Retour aux projets",
+    "in_development": "En cours de développement",
+    "impact": "Impact",
+    "highlights": "Points Clés",
+    "dev_note": "Ce projet est actuellement en développement, le dépôt source n'est donc pas encore public.",
+    "items": {
+      "quiz-master": {
+        "title": "Quiz Master - App de Quiz IA avec Apprentissage Interactif",
+        "description": "Quiz Master est une application full-stack (Flutter & Django) qui génère des quiz à partir de textes ou de PDF, gère les données utilisateurs et suit leur progression. Ma contribution s'est focalisée sur l'expérience de jeu : flux de session interactive, révision post-quiz, retours sur résultats et import de quiz via JSON local.",
+        "impact": "Combine la puissance de l'IA pour la génération de contenu avec une expérience d'apprentissage fluide supportant le feedback et le mode hors-ligne.",
+        "highlights": [
+          "Conception de l'expérience Flutter avec interface dynamique, compte à rebours et score en temps réel.",
+          "Implémentation d'un écran de révision dédié pour inspecter les réponses après validation.",
+          "Création de résumés de résultats offrant un feedback immédiat sur la performance.",
+          "Support d'importation de quiz via fichiers JSON locaux pour une utilisation hors-ligne."
+        ]
+      },
+      "association-website": {
+        "title": "Site d'Association - Gestion d'Événements et Opérations Admin",
+        "description": "Plateforme web full-stack pour une association communautaire. J'ai géré l'expérience des événements à venir, la carte interactive et les flux d'administration interne. En tant que team leader, j'ai coordonné l'équipe tout en implémentant les panels admin pour les bénévoles et participants.",
+        "impact": "Centralise la visibilité des activités et simplifie la gestion des inscriptions et du volontariat via une interface unique.",
+        "highlights": [
+          "Direction du projet en tant que Team Leader et responsable de la section événements publics.",
+          "Développement du flux d'inscription et des formulaires spécifiques pour les bénévoles.",
+          "Mise en place des panels admin (CRUD complet) pour la gestion des participants et des événements.",
+          "Suivi du taux d'occupation des événements en temps réel (inscrits vs capacité).",
+          "Intégration d'une section cartographique pour une présentation géolocalisée de l'association."
+        ]
+      },
+      "smartshop": {
+        "title": "SmartShop - Catalogue Mobile E-Commerce et Gestion de Stock",
+        "description": "Application mobile Flutter pour naviguer dans un catalogue, gérer un panier et des favoris. Elle combine des données JSON locales, une persistance SQLite sur l'appareil et des flux CRUD via HTTP pour gérer un inventaire distant depuis la même interface.",
+        "impact": "Centralise la navigation, l'état utilisateur local et la gestion de stock distante dans un seul flux de travail mobile.",
+        "highlights": [
+          "Chargement d'un catalogue typé depuis des assets JSON avec filtrage par catégorie.",
+          "Gestion de produits à distance via requêtes HTTP (GET, POST, PUT, DELETE) sur une API REST locale.",
+          "Persistance des favoris via SQLite (sqflite) avec opérations de requête et suppression.",
+          "Gestion du panier et de la recherche avec suivi de l'historique des actions en mémoire.",
+          "Mode sombre global et redimensionnement dynamique via ValueNotifier."
+        ]
+      },
+      "pfa": {
+        "title": "Plateforme d'Audit de Code et d'Analyse Qualité Automatisée",
+        "description": "Plateforme distribuée en microservices (projet de fin d'année) automatisant l'audit technique. Elle clone des dépôts GitHub privés, lance des analyses statiques et de sécurité, puis agrège les résultats. Spring Boot pour l'orchestration et FastAPI (Python) pour l'analyse.",
+        "impact": "Transforme des dépôts bruts en rapports structurés sur la qualité, la sécurité et la maintenabilité, réduisant drastiquement l'effort de revue manuelle.",
+        "highlights": [
+          "Clonage sécurisé de dépôts privés via tokens d'installation dans des volumes Docker isolés par Job ID.",
+          "Génération d'un Manifeste de fichiers JSON capturant extensions, tailles et horodatages.",
+          "Conception d'un suivi de cycle de vie des jobs sous PostgreSQL (pending → running → complete).",
+          "Extension des métriques SonarQube : bugs, vulnérabilités, complexité cognitive, duplications.",
+          "Intégration du service qualité dans un flux d'événements RabbitMQ.",
+          "Orchestration dynamique du SonarScanner via Docker et récupération des résultats via API REST."
+        ]
+      },
+      "simple-ecommerce": {
+        "title": "Plateforme E-Commerce Simplifiée",
+        "description": "Application e-commerce full-stack comprenant un storefront React et une API REST Express avec PostgreSQL. Supporte la navigation, le panier, le paiement et un panel admin sécurisé par JWT.",
+        "impact": "Permet aux petits commerces d'établir une présence numérique avec un suivi de stock robuste et une gestion sécurisée.",
+        "highlights": [
+          "Dashboard Admin protégé par JWT pour les mises à jour de stock et le suivi des commandes en temps réel.",
+          "Gestion de données relationnelles avec PostgreSQL (requêtes complexes, pagination, transactions).",
+          "Architecture React modulaire avec Context API pour l'authentification et la persistance du panier.",
+          "Backend robuste avec Express, gestion d'upload d'images (Multer) et validation de requêtes.",
+          "Scripts d'automatisation pour l'initialisation du schéma et les données de test."
+        ]
+      },
+      "atlas-guardian": {
+        "title": "Atlas Guardian - Alerte Séisme et Assistant d'Évacuation",
+        "description": "Application d'urgence Flutter dédiée à la préparation aux séismes. Elle utilise Mapbox pour la cartographie de crise et des notifications audio/vibrations pour simuler des alertes imminentes et guider les utilisateurs hors des zones de danger.",
+        "impact": "Accélère la réaction des utilisateurs en cas de séisme en combinant alertes, itinéraires d'évacuation et modules éducatifs.",
+        "highlights": [
+          "Service d'état global (Provider) gérant les phases : normal, imminent et post-catastrophe.",
+          "Overlay d'urgence plein écran avec vibrations et sirène en boucle pour une visibilité maximale.",
+          "Intégration de Mapbox pour afficher zones de crise, points de rassemblement et tracés d'évacuation.",
+          "Calcul d'itinéraires piétons via Mapbox Directions API depuis la position actuelle vers une zone sûre.",
+          "Détection géospatiale des zones de danger avec alertes de franchissement de périmètre.",
+          "Modules d'apprentissage et écran de priorité des dommages avec code couleur pour le tri des secours."
+        ]
+      },
+      "snapshot-tool": {
+        "title": "Snapshot Tool - Capture et Restauration de Processus Système",
+        "description": "Application desktop multiplateforme qui capture l'état des processus en cours, l'utilisation mémoire et les connexions réseau. Utilise la bibliothèque psutil et une interface PyQt5 pour gérer des archives JSON.",
+        "impact": "Permet de sauvegarder et de reconstruire rapidement des environnements de travail complexes, réduisant le temps de configuration manuelle.",
+        "highlights": [
+          "Suivi des processus à l'échelle du système et monitoring des ressources avec psutil.",
+          "Interface GUI multiplateforme avec PyQt5 et gestion dynamique des répertoires (Windows/Unix).",
+          "Système de capture automatique programmable via QTimer.",
+          "Persistance des données en JSON pour un stockage portable et lisible par l'homme."
+        ]
+      },
+      "weball-v2": {
+        "title": "WeBall Match Organizer - Application Android",
+        "description": "App Android native pour organiser des matchs de basket, rejoindre des parties et discuter avec les participants. Utilise Firebase pour l'authentification, le stockage et la messagerie.",
+        "impact": "Aide les joueurs à organiser des matchs locaux et à coordonner leur participation sans multiplier les outils de messagerie.",
+        "highlights": [
+          "Authentification Firebase (Email/Mot de passe).",
+          "Création de matchs avec date, lieu, niveau de compétence et type de jeu.",
+          "Système de demande de participation pour les joueurs.",
+          "Chat de groupe intégré à chaque match.",
+          "Édition de profil avec upload d'avatar sur Firebase Storage.",
+          "Intégration Google Maps pour la localisation des terrains."
+        ]
+      },
+      "weball-v1": {
+        "title": "WeBall Sports Booking - Réservation de Terrains",
+        "description": "App Android native pour découvrir des événements sportifs et réserver des terrains (basket, foot, volley). Inclut l'authentification Firebase et la gestion des tournois.",
+        "impact": "Simplifie la recherche d'activités sportives et la réservation d'infrastructures depuis une interface mobile unique.",
+        "highlights": [
+          "Flux d'inscription et de connexion via Firebase.",
+          "Structure avec navigation basse (Home, Événements, Profil).",
+          "Flux de réservation via CalendarView pour plusieurs sports.",
+          "Stockage des données en temps réel via Firebase Realtime Database.",
+          "Support d'affichage d'images avec Glide et Firebase Storage.",
+          "Pages de détails pour les tournois spécialisés (3x3, 5x5, etc.)."
+        ]
+      }
+      
+    }
+  },
+  "not_found": {
+    "title": "Page non trouvée",
+    "description": "La page demandée ne correspond à aucun élément actuellement disponible dans les rayons du portfolio."
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Si mon travail ressemble à votre genre de chaos, discutons-en.",
+    "email": "Email",
+    "phone": "Téléphone",
+    "location": "Localisation",
+    "location_val": "Maroc, Marrakech",
+    "form": {
+      "name": "Votre Nom",
+      "email": "Votre Email",
+      "message": "Votre Message",
+      "send": "Envoyer le message"
+    }
+  },
+  "footer": {
+    "rights": "Tous droits réservés."
+  }
+}
