@@ -163,7 +163,7 @@ const seededProjects: Project[] = [
       "CSS",
     ],
     image: "/images/ecom.png",
-    githubUrl: null,
+    githubUrl: "https://github.com/mohamedefk02/E-commerce-website.git",
     type: "fullstack",
   },
   {
