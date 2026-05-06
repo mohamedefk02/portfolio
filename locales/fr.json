@@ -98,6 +98,8 @@
     "all": "Tous",
     "empty": "Aucun projet dans cette catégorie pour le moment.",
     "view_details": "Voir de plus près",
+    "previous": "Précédent",
+    "next": "Suivant",
     "view_github": "Voir sur GitHub",
     "back_to_projects": "Retour aux projets",
     "in_development": "En cours de développement",

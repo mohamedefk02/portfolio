@@ -9,13 +9,41 @@ import { slugifyTitle } from "@/lib/utils";
 import { useTranslation } from "./i18n/language-context";
 
 const filters = ["all", "mobile", "web", "desktop", "fullstack"] as const;
+const PROJECTS_PER_PAGE = 4; // 2 rows with 2 columns
 
 export function ProjectsSection({ projects }: { projects: Project[] }) {
   const [activeFilter, setActiveFilter] = useState<(typeof filters)[number]>("all");
+  const [currentPage, setCurrentPage] = useState(1);
   const { t } = useTranslation();
 
   const visibleProjects =
     activeFilter === "all" ? projects : projects.filter((project) => project.type === activeFilter);
+
+  const totalPages = Math.ceil(visibleProjects.length / PROJECTS_PER_PAGE);
+  const startIndex = (currentPage - 1) * PROJECTS_PER_PAGE;
+  const endIndex = startIndex + PROJECTS_PER_PAGE;
+  const currentProjects = visibleProjects.slice(startIndex, endIndex);
+
+  const handleFilterChange = (filter: (typeof filters)[number]) => {
+    setActiveFilter(filter);
+    setCurrentPage(1); // Reset to first page when filter changes
+  };
+
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+  };
+
+  const handlePrevPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+    }
+  };
+
+  const handleNextPage = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
 
   return (
     <section id="projects" className="section">
@@ -27,7 +55,7 @@ export function ProjectsSection({ projects }: { projects: Project[] }) {
             className={`project-filter${activeFilter === filter ? " is-active" : ""}`}
             type="button"
             data-filter={filter}
-            onClick={() => setActiveFilter(filter)}
+            onClick={() => handleFilterChange(filter)}
           >
             {filter === "all" ? t("projects.all") || "All" : filter.charAt(0).toUpperCase() + filter.slice(1)}
           </button>
@@ -39,7 +67,7 @@ export function ProjectsSection({ projects }: { projects: Project[] }) {
       ) : null}
 
       <div className="projects-grid">
-        {visibleProjects.map((project) => {
+        {currentProjects.map((project) => {
           const title = t(`projects.items.${project.id}.title`) || project.title;
           return (
             <Link
@@ -68,6 +96,41 @@ export function ProjectsSection({ projects }: { projects: Project[] }) {
           );
         })}
       </div>
+
+      {totalPages > 1 && (
+        <div className="pagination-controls">
+          <button
+            className="pagination-btn"
+            onClick={handlePrevPage}
+            disabled={currentPage === 1}
+            type="button"
+          >
+            ‹ {t("projects.previous") || "Previous"}
+          </button>
+
+          <div className="pagination-pages">
+            {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+              <button
+                key={page}
+                className={`pagination-page${currentPage === page ? " is-active" : ""}`}
+                onClick={() => handlePageChange(page)}
+                type="button"
+              >
+                {page}
+              </button>
+            ))}
+          </div>
+
+          <button
+            className="pagination-btn"
+            onClick={handleNextPage}
+            disabled={currentPage === totalPages}
+            type="button"
+          >
+            {t("projects.next") || "Next"} ›
+          </button>
+        </div>
+      )}
     </section>
   );
 }
