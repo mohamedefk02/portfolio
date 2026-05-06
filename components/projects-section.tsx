@@ -6,7 +6,7 @@ import { useState } from "react";
 import type { Project } from "@/lib/types";
 import { slugifyTitle } from "@/lib/utils";
 
-const filters = ["all", "mobile", "web", "desktop"] as const;
+const filters = ["all", "mobile", "web", "desktop", "fullstack"] as const;
 
 export function ProjectsSection({ projects }: { projects: Project[] }) {
   const [activeFilter, setActiveFilter] = useState<(typeof filters)[number]>("all");

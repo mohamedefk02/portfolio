@@ -75,6 +75,37 @@ const seededProjects: Project[] = [
     type: "mobile",
   },
   {
+    title: "Simple E-Commerce Platform",
+    description:
+      "A full-stack e-commerce application featuring a React-based storefront and an Express REST API with PostgreSQL. It supports product browsing, a shopping cart, checkout processing, and a JWT-secured admin panel for inventory and order management.",
+    impact:
+      "Enables small-scale retail operations to establish a digital presence with robust inventory tracking, secure administrative controls, and a responsive customer experience.",
+    highlights: [
+      "JWT-Protected Admin Dashboard: Secure administrative interface for real-time inventory updates, product CRUD, and order status tracking.",
+      "Relational Data Management: PostgreSQL implementation with complex queries for product filtering, pagination, and transactional order processing.",
+      "Modular React Architecture: Client-side state management using Context API for authentication and shopping cart persistence across sessions.",
+      "Robust Backend Services: RESTful API design with Express, including image upload handling via Multer and request validation using express-validator.",
+      "Automated Seeding & Deployment: Integrated scripts for database schema initialization, admin user creation, and sample data population.",
+    ],
+    techStack: [
+      "React",
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+      "Vite",
+      "JWT",
+      "Multer",
+      "React Router",
+      "Bcrypt.js",
+      "Express Validator",
+      "Context API",
+      "CSS",
+    ],
+    image: "/images/ecom.png",
+    githubUrl: null,
+    type: "web",
+  },
+  {
     title: "Atlas Guardian - Earthquake Alert and Evacuation Assistant",
     description:
       "Atlas Guardian is a Flutter emergency-response app focused on earthquake readiness and evacuation. It combines provider-managed alert state, Mapbox-based crisis mapping, and audio/vibration notifications to simulate imminent quake warnings, guide users out of danger zones, and surface preparedness and damage-priority information.",
@@ -178,6 +209,45 @@ const seededProjects: Project[] = [
     githubUrl: "https://github.com/mohamedefk02/weball-v1",
     type: "mobile",
   },
+  {
+    title: "Automated Code Due Diligence & Quality Analysis Platform",
+    description:
+      "A distributed microservices platform (year-end capstone project) that automates software due diligence by cloning private GitHub repositories, running static and security analysis, and aggregating results into structured reports. It uses Java Spring Boot for orchestration and Python FastAPI for analysis services, with Docker-based isolation and RabbitMQ-driven workflows for asynchronous processing.",
+    impact:
+      "Provides automated technical due diligence by transforming raw repositories into structured insights on code quality, security, and maintainability. It reduces manual review effort by centralizing cloning, analysis, and reporting into an event-driven pipeline with reproducible results.",
+    highlights: [
+      "Implemented secure cloning of private GitHub repositories using installation tokens, storing each repository inside a Docker Volume uniquely named by job ID for full traceability.",
+      "Generated a structured File Manifest JSON per repository, capturing file paths, extensions, sizes, and last modified timestamps for downstream analysis.",
+      "Designed and integrated job lifecycle tracking in PostgreSQL with state transitions (pending → running → complete) ensuring reliable workflow observability.",
+      "Extended SonarQube metrics collection layer to include bugs, vulnerabilities, complexity, cognitive complexity, code smells, duplication rate, and quality gate status.",
+      "Integrated Code Quality Service into RabbitMQ event flow, consuming job_ready messages and publishing enriched job_result payloads after analysis.",
+      "Orchestrated dynamic SonarScanner execution via Docker, mounting repository volumes and retrieving analysis results through SonarQube REST API.",
+    ],
+    techStack: [
+      "Java",
+      "Spring Boot",
+      "Spring Cloud Gateway",
+      "Python",
+      "FastAPI",
+      "RabbitMQ",
+      "PostgreSQL",
+      "Docker",
+      "SonarQube",
+      "SonarScanner",
+      "GitHub API",
+      "JWT",
+      "Tree-sitter",
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Flyway",
+    ],
+    image: "/images/PFA.png",
+    githubUrl: null,
+    isInDevelopment: true,
+    type: "fullstack",
+  },
+  
 ];
 
 const seededSkillCategories: SkillCategory[] = [
