@@ -47,7 +47,7 @@ const seededProjects: Project[] = [
     image: "/images/aspivot.png",
     githubUrl: null,
     isInDevelopment: true,
-    type: "web",
+    type: "fullstack",
   },
   {
     id: "smartshop",
@@ -164,7 +164,7 @@ const seededProjects: Project[] = [
     ],
     image: "/images/ecom.png",
     githubUrl: null,
-    type: "web",
+    type: "fullstack",
   },
   {
     id: "atlas-guardian",
