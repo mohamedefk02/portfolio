@@ -6,17 +6,20 @@ import { useState } from "react";
 import type { Project } from "@/lib/types";
 import { slugifyTitle } from "@/lib/utils";
 
+import { useTranslation } from "./i18n/language-context";
+
 const filters = ["all", "mobile", "web", "desktop", "fullstack"] as const;
 
 export function ProjectsSection({ projects }: { projects: Project[] }) {
   const [activeFilter, setActiveFilter] = useState<(typeof filters)[number]>("all");
+  const { t } = useTranslation();
 
   const visibleProjects =
     activeFilter === "all" ? projects : projects.filter((project) => project.type === activeFilter);
 
   return (
     <section id="projects" className="section">
-      <h2 className="section-title">Projects</h2>
+      <h2 className="section-title">{t("projects.title")}</h2>
       <div className="project-filter-bar">
         {filters.map((filter) => (
           <button
@@ -26,41 +29,44 @@ export function ProjectsSection({ projects }: { projects: Project[] }) {
             data-filter={filter}
             onClick={() => setActiveFilter(filter)}
           >
-            {filter === "all" ? "All" : filter.charAt(0).toUpperCase() + filter.slice(1)}
+            {filter === "all" ? t("projects.all") || "All" : filter.charAt(0).toUpperCase() + filter.slice(1)}
           </button>
         ))}
       </div>
 
       {visibleProjects.length === 0 ? (
-        <p className="project-filter-empty">No projects in this category yet.</p>
+        <p className="project-filter-empty">{t("projects.empty") || "No projects in this category yet."}</p>
       ) : null}
 
       <div className="projects-grid">
-        {visibleProjects.map((project) => (
-          <Link
-            key={project.title}
-            className="project-card show"
-            href={`/projects/${slugifyTitle(project.title)}`}
-            data-type={project.type}
-          >
-            <div className="project-media">
-              <img src={project.image} alt={project.title} />
-            </div>
-            <div className="project-info">
-              <div className="project-badge-row">
-                <span className="project-type-badge">{project.type}</span>
-                {project.isInDevelopment ? <span className="project-status-badge">In development</span> : null}
+        {visibleProjects.map((project) => {
+          const title = t(`projects.items.${project.id}.title`) || project.title;
+          return (
+            <Link
+              key={project.id}
+              className="project-card show"
+              href={`/projects/${slugifyTitle(project.title)}`}
+              data-type={project.type}
+            >
+              <div className="project-media">
+                <img src={project.image} alt={title} />
               </div>
-              <div className="project-card-footer">
-                <h3>{project.title}</h3>
-                <span className="project-link-text">
-                  Take a look
-                  <i className="bx bx-right-arrow-alt" />
-                </span>
+              <div className="project-info">
+                <div className="project-badge-row">
+                  <span className="project-type-badge">{project.type}</span>
+                  {project.isInDevelopment ? <span className="project-status-badge">{t("projects.in_development")}</span> : null}
+                </div>
+                <div className="project-card-footer">
+                  <h3>{title}</h3>
+                  <span className="project-link-text">
+                    {t("projects.view_details") || "Take a look"}
+                    <i className="bx bx-right-arrow-alt" />
+                  </span>
+                </div>
               </div>
-            </div>
-          </Link>
-        ))}
+            </Link>
+          );
+        })}
       </div>
     </section>
   );

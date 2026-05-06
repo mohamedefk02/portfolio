@@ -2,6 +2,7 @@ import type { Project, SkillCategory } from "@/lib/types";
 
 const seededProjects: Project[] = [
   {
+    id: "quiz-master",
     title: "Quiz Master - AI Quiz App with Interactive Learning Features",
     description:
       "Quiz Master is a full-stack Flutter and Django quiz application that generates quizzes from text prompts and PDFs, manages user data, and tracks quiz progress. My contribution focused on the quiz-taking experience by building the interactive session flow, post-quiz review, results feedback, and local JSON-based quiz import.",
@@ -29,6 +30,7 @@ const seededProjects: Project[] = [
     type: "mobile",
   },
   {
+    id: "association-website",
     title: "Association Website - Event Management and Admin Operations",
     description:
       "A full-stack web platform for a community association, with my contribution focused on the upcoming events experience, the interactive map, and the internal admin workflows. As team leader, I also drove coordination while implementing the event listing and detail flows plus the admin panels for volunteers, participants, and events.",
@@ -48,6 +50,7 @@ const seededProjects: Project[] = [
     type: "web",
   },
   {
+    id: "smartshop",
     title: "SmartShop - Mobile E-Commerce Catalog and Inventory Manager",
     description:
       "SmartShop is a Flutter mobile app for browsing a product catalog, viewing product details, managing a cart, and saving favorites. It combines bundled JSON product data, on-device SQLite persistence, and HTTP-based CRUD flows for managing remote inventory from the same interface.",
@@ -75,6 +78,7 @@ const seededProjects: Project[] = [
     type: "mobile",
   },
   {
+    id: "simple-ecommerce",
     title: "Simple E-Commerce Platform",
     description:
       "A full-stack e-commerce application featuring a React-based storefront and an Express REST API with PostgreSQL. It supports product browsing, a shopping cart, checkout processing, and a JWT-secured admin panel for inventory and order management.",
@@ -106,6 +110,7 @@ const seededProjects: Project[] = [
     type: "web",
   },
   {
+    id: "atlas-guardian",
     title: "Atlas Guardian - Earthquake Alert and Evacuation Assistant",
     description:
       "Atlas Guardian is a Flutter emergency-response app focused on earthquake readiness and evacuation. It combines provider-managed alert state, Mapbox-based crisis mapping, and audio/vibration notifications to simulate imminent quake warnings, guide users out of danger zones, and surface preparedness and damage-priority information.",
@@ -135,6 +140,7 @@ const seededProjects: Project[] = [
     type: "mobile",
   },
   {
+    id: "snapshot-tool",
     title: "Snapshot Tool - System Process Capture and Restoration",
     description:
       "A cross-platform desktop application that captures detailed snapshots of running processes, memory usage, and network connections. It utilizes the psutil library to record system state and provides a PyQt5 interface for managing and restoring workspace environments from JSON-based archives.",
@@ -152,6 +158,7 @@ const seededProjects: Project[] = [
     type: "desktop",
   },
   {
+    id: "weball-v2",
     title: "WeBall Match Organizer Android App",
     description:
       "A native Android app for creating basketball matches, joining games, chatting with participants, and managing player profiles. It uses Firebase services for authentication, data storage, messaging, and media upload.",
@@ -183,6 +190,7 @@ const seededProjects: Project[] = [
     type: "mobile",
   },
   {
+    id: "weball-v1",
     title: "WeBall Sports Booking Android App",
     description:
       "A native Android app for discovering sports events and reserving courts for basketball, football, and volleyball. It includes Firebase-backed authentication, booking persistence, tournament detail screens, and a user profile area.",
@@ -210,6 +218,7 @@ const seededProjects: Project[] = [
     type: "mobile",
   },
   {
+    id: "pfa",
     title: "Automated Code Due Diligence & Quality Analysis Platform",
     description:
       "A distributed microservices platform (year-end capstone project) that automates software due diligence by cloning private GitHub repositories, running static and security analysis, and aggregating results into structured reports. It uses Java Spring Boot for orchestration and Python FastAPI for analysis services, with Docker-based isolation and RabbitMQ-driven workflows for asynchronous processing.",
@@ -247,7 +256,6 @@ const seededProjects: Project[] = [
     isInDevelopment: true,
     type: "fullstack",
   },
-  
 ];
 
 const seededSkillCategories: SkillCategory[] = [

@@ -60,6 +60,8 @@ export const metadata: Metadata = {
   },
 };
 
+import { LanguageProvider } from "@/components/i18n/language-context";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -74,7 +76,9 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJsonLd) }}
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <LanguageProvider>{children}</LanguageProvider>
+      </body>
     </html>
   );
 }

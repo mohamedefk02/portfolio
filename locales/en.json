@@ -1,0 +1,241 @@
+{
+  "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "experience": "Experience",
+    "skills": "Skills",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Software Engineering Student • Web & Mobile Developer",
+    "description": "I’m a 4th-year Software Engineering student with a background in Web and Mobile Development, I build applications, break them, fix them, and then break them again just to be sure.\nThis portfolio is a collection of that process: projects that survived, skills I picked up, and lessons learned the hard way.",
+    "cta": "Say hello"
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "A quick introduction.",
+    "experience": "Experience",
+    "experience_sub": "3+ Years",
+    "support": "Support",
+    "support_sub": "Online 24/7",
+    "description": "I started out curious about how software actually works under the hood, and that curiosity naturally turned into building things myself. Over time, that evolved into working across web, mobile, and backend development, where I enjoy taking ideas from concept to something real and usable.\n\nI’ve learned that understanding why something works is just as important as getting it to work in the first place. That mindset usually comes with a bit of trial and error — broken builds, unexpected behavior, and a fair amount of debugging.\n\nBut that process is what I enjoy most. Each issue forces me to look deeper, rethink the approach, and improve the solution. Eventually, things come together into something more stable, more thoughtful, and closer to what was originally intended."
+  },
+  "education": {
+    "title": "Education",
+    "subtitle": "The path from \"I like tech\" to \"let me check the logs.\"",
+    "schools": {
+      "high_school": {
+        "name": "Abtih High School",
+        "degree": "Baccalaureat, Science Physique - Option Francais",
+        "date": "Sep 2020 - Jun 2021"
+      },
+      "est": {
+        "name": "Higher School of Technology - EST",
+        "degree": "DUT - Web & Mobile Application Developer",
+        "date": "Sep 2022 - Jun 2024"
+      },
+      "fsjes": {
+        "name": "FSJES",
+        "degree": "First year in Bachelor in Economy",
+        "date": "Sep 2021 - Jun 2022"
+      },
+      "eniad": {
+        "name": "ENIAD",
+        "degree": "Software Engineering Degree",
+        "date": "Sep 2024 - Present"
+      }
+    }
+  },
+  "experience": {
+    "title": "Experience",
+    "subtitle": "The roles where I learned by building, fixing, and handling real-world issues.",
+    "internships": [
+      {
+        "title": "Mobile App Developer Intern",
+        "company": "Enjaz COM",
+        "period": "May 2024 - Jun 2024",
+        "mode": "Remote",
+        "points": [
+          "Worked on Android application features, improving performance and responsiveness",
+          "Identified and fixed bottlenecks in code and app behavior",
+          "Contributed to UI components and user interactions for better usability",
+          "Participated in code reviews and followed clean coding practices"
+        ]
+      },
+      {
+        "title": "Technical Support Intern",
+        "company": "WeQuest",
+        "period": "Jul 2023 - Aug 2023",
+        "mode": "Hybrid",
+        "points": [
+          "Provided technical support by diagnosing and resolving software and system issues",
+          "Handled day-to-day troubleshooting, reducing recurring problems for staff",
+          "Organized and maintained files, reports, and system data",
+          "Learned to debug real-world issues where the problem is rarely obvious"
+        ]
+      }
+    ]
+  },
+  "focus": {
+    "title": "Current Focus",
+    "subtitle": "What I'm working on when I'm not pretending one small fix won't affect five files.",
+    "description": "Right now, I'm focused on building stronger full-stack applications, getting sharper on backend design, and making interfaces feel clean without feeling generic. I like projects that have real behavior behind them: state, edge cases, admin flows, APIs, mobile interactions, and the kind of bugs that only show up after you say, \"it should be fine.\""
+  },
+  "skills": {
+    "title": "Skills",
+    "subtitle": "The tools I reach for when it's time to build, debug, and ship.",
+    "categories": {
+      "programming_languages": "Programming Languages",
+      "frameworks_libraries": "Frameworks & Libraries",
+      "databases": "Databases",
+      "tools_technologies": "Tools & Technologies"
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "Selection of things I've built, some to solve a problem, some just to see if I could.",
+    "all": "All",
+    "empty": "No projects in this category yet.",
+    "view_details": "Take a look",
+    "view_github": "View on GitHub",
+    "back_to_projects": "Back to projects",
+    "in_development": "In Development",
+    "impact": "Impact",
+    "highlights": "Key Highlights",
+    "dev_note": "This project is currently in development, so the source repository is not public yet.",
+    "items": {
+      "quiz-master": {
+        "title": "Quiz Master - AI Quiz App with Interactive Learning Features",
+        "description": "Quiz Master is a full-stack Flutter and Django quiz application that generates quizzes from text prompts and PDFs, manages user data, and tracks quiz progress. My contribution focused on the quiz-taking experience by building the interactive session flow, post-quiz review, results feedback, and local JSON-based quiz import.",
+        "impact": "It combines AI-powered quiz generation with a polished user-facing learning experience that supports feedback, review, and offline-ready content.",
+        "highlights": [
+          "Worked on the Flutter quiz experience by designing an interactive interface with dynamic questions, a countdown timer, and real-time scoring.",
+          "Implemented a dedicated review screen so users can revisit questions and inspect their submitted answers after finishing a quiz.",
+          "Built result summary screens that provide immediate feedback on quiz performance and completion outcomes.",
+          "Added support for importing quizzes from local JSON files to enable offline usage and flexible content updates."
+        ]
+      },
+      "association-website": {
+        "title": "Association Website - Event Management and Admin Operations",
+        "description": "A full-stack web platform for a community association, with my contribution focused on the upcoming events experience, the interactive map, and the internal admin workflows. As team leader, I also drove coordination while implementing the event listing and detail flows plus the admin panels for volunteers, participants, and events.",
+        "impact": "It helped the association present upcoming activities clearly and manage registrations and volunteer operations from one centralized interface.",
+        "highlights": [
+          "Led the project as team leader while owning the upcoming events section of the public website.",
+          "Built the event details and registration flow, including participant submission and event-specific volunteer application paths.",
+          "Implemented the admin panels for volunteers, participants, and events, with approval, decline, create, update, and delete workflows.",
+          "Added event occupancy tracking in the admin and public views using registered-versus-capacity data from the backend.",
+          "Integrated the map section into the public site to support location-oriented presentation of the association."
+        ]
+      },
+      "smartshop": {
+        "title": "SmartShop - Mobile E-Commerce Catalog and Inventory Manager",
+        "description": "SmartShop is a Flutter mobile app for browsing a product catalog, viewing product details, managing a cart, and saving favorites. It combines bundled JSON product data, on-device SQLite persistence, and HTTP-based CRUD flows for managing remote inventory from the same interface.",
+        "impact": "The app centralizes catalog browsing, local user state, and remote stock management into a single mobile shopping workflow.",
+        "highlights": [
+          "Loads a typed product catalog from bundled JSON assets and filters inventory by category on the home screen.",
+          "Implements remote product management with HTTP GET, POST, PUT, and DELETE requests against a local REST API.",
+          "Persists favorites in on-device SQLite using sqflite, including add, remove, and query operations.",
+          "Provides product detail, cart, and search flows with in-memory state and action history tracking.",
+          "Applies app-wide dark mode and dynamic text sizing through ValueNotifier-driven theme settings."
+        ]
+      },
+      "simple-ecommerce": {
+        "title": "Simple E-Commerce Platform",
+        "description": "A full-stack e-commerce application featuring a React-based storefront and an Express REST API with PostgreSQL. It supports product browsing, a shopping cart, checkout processing, and a JWT-secured admin panel for inventory and order management.",
+        "impact": "Enables small-scale retail operations to establish a digital presence with robust inventory tracking, secure administrative controls, and a responsive customer experience.",
+        "highlights": [
+          "JWT-Protected Admin Dashboard: Secure administrative interface for real-time inventory updates, product CRUD, and order status tracking.",
+          "Relational Data Management: PostgreSQL implementation with complex queries for product filtering, pagination, and transactional order processing.",
+          "Modular React Architecture: Client-side state management using Context API for authentication and shopping cart persistence across sessions.",
+          "Robust Backend Services: RESTful API design with Express, including image upload handling via Multer and request validation using express-validator.",
+          "Automated Seeding & Deployment: Integrated scripts for database schema initialization, admin user creation, and sample data population."
+        ]
+      },
+      "atlas-guardian": {
+        "title": "Atlas Guardian - Earthquake Alert and Evacuation Assistant",
+        "description": "Atlas Guardian is a Flutter emergency-response app focused on earthquake readiness and evacuation. It combines provider-managed alert state, Mapbox-based crisis mapping, and audio/vibration notifications to simulate imminent quake warnings, guide users out of danger zones, and surface preparedness and damage-priority information.",
+        "impact": "It helps users react faster during earthquake scenarios by combining alerts, evacuation routing, and safety education in a single mobile experience.",
+        "highlights": [
+          "Built a provider-backed earthquake state service that transitions between normal, imminent, and post-disaster states and drives the UI across the app.",
+          "Implemented a full-screen emergency overlay with device vibration and looping siren playback using just_audio and vibration for high-visibility alerts.",
+          "Integrated Mapbox Maps to render crisis zones, safe hubs, live user markers, and evacuation paths with polygon, polyline, and point annotations.",
+          "Connected to the Mapbox Directions API over HTTP to fetch walking routes from the user's position to a calculated safe hub outside the red zone.",
+          "Added geospatial danger-state detection and movement guards that warn users when they attempt to enter restricted crisis areas.",
+          "Included preparedness learning modules and a satellite-style damage-priority screen with color-coded rescue zones and triage lists."
+        ]
+      },
+      "snapshot-tool": {
+        "title": "Snapshot Tool - System Process Capture and Restoration",
+        "description": "A cross-platform desktop application that captures detailed snapshots of running processes, memory usage, and network connections. It utilizes the psutil library to record system state and provides a PyQt5 interface for managing and restoring workspace environments from JSON-based archives.",
+        "impact": "Enables users to preserve and rapidly reconstruct complex application environments, significantly reducing manual setup time after system restarts.",
+        "highlights": [
+          "Implemented system-wide process tracking and resource monitoring using the psutil library",
+          "Developed a cross-platform GUI with PyQt5 featuring dynamic directory management for Windows and Unix environments",
+          "Engineered an automated state-capture system with user-configurable intervals using QTimer",
+          "Integrated JSON-based data persistence for portable and human-readable system state storage"
+        ]
+      },
+      "weball-v2": {
+        "title": "WeBall Match Organizer Android App",
+        "description": "A native Android app for creating basketball matches, joining games, chatting with participants, and managing player profiles. It uses Firebase services for authentication, data storage, messaging, and media upload.",
+        "impact": "Helps players organize local matches and coordinate participation from one mobile app instead of using separate messaging and booking tools.",
+        "highlights": [
+          "Email/password registration and login with Firebase Authentication",
+          "Match creation with date, time, location, skill level, and match type",
+          "Join-request flow for players who want to enter a match",
+          "Group chat tied to each match",
+          "Profile editing with avatar upload to Firebase Storage",
+          "Google Maps integration via Android manifest API key setup"
+        ]
+      },
+      "weball-v1": {
+        "title": "WeBall Sports Booking Android App",
+        "description": "A native Android app for discovering sports events and reserving courts for basketball, football, and volleyball. It includes Firebase-backed authentication, booking persistence, tournament detail screens, and a user profile area.",
+        "impact": "Helps players find sports activities and reserve facilities from one mobile app instead of handling bookings manually.",
+        "highlights": [
+          "Firebase email/password registration and login flow",
+          "Bottom-navigation app structure with Home, Events, and Profile screens",
+          "Court booking flows for basketball, football, and volleyball using CalendarView",
+          "Reservation data stored in Firebase Realtime Database",
+          "Profile screen with uploaded avatar support via Firebase Storage and Glide",
+          "Tournament detail pages for 3x3 basketball, 5x5 basketball, football, and volleyball"
+        ]
+      },
+      "pfa": {
+        "title": "Automated Code Due Diligence & Quality Analysis Platform",
+        "description": "A distributed microservices platform (year-end capstone project) that automates software due diligence by cloning private GitHub repositories, running static and security analysis, and aggregating results into structured reports. It uses Java Spring Boot for orchestration and Python FastAPI for analysis services, with Docker-based isolation and RabbitMQ-driven workflows for asynchronous processing.",
+        "impact": "Provides automated technical due diligence by transforming raw repositories into structured insights on code quality, security, and maintainability. It reduces manual review effort by centralizing cloning, analysis, and reporting into an event-driven pipeline with reproducible results.",
+        "highlights": [
+          "Implemented secure cloning of private GitHub repositories using installation tokens, storing each repository inside a Docker Volume uniquely named by job ID for full traceability.",
+          "Generated a structured File Manifest JSON per repository, capturing file paths, extensions, sizes, and last modified timestamps for downstream analysis.",
+          "Designed and integrated job lifecycle tracking in PostgreSQL with state transitions (pending → running → complete) ensuring reliable workflow observability.",
+          "Extended SonarQube metrics collection layer to include bugs, vulnerabilities, complexity, cognitive complexity, code smells, duplication rate, and quality gate status.",
+          "Integrated Code Quality Service into RabbitMQ event flow, consuming job_ready messages and publishing enriched job_result payloads after analysis.",
+          "Orchestrated dynamic SonarScanner execution via Docker, mounting repository volumes and retrieving analysis results through SonarQube REST API."
+        ]
+      }
+    }
+  },
+  "not_found": {
+    "title": "Page not found",
+    "description": "The requested page does not match any item currently available in the portfolio store."
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "If my work looks like your kind of chaos, let's talk.",
+    "email": "Email",
+    "phone": "Phone",
+    "location": "Location",
+    "location_val": "Morocco, Marrakesh",
+    "form": {
+      "name": "Your Name",
+      "email": "Your Email",
+      "message": "Your Message",
+      "send": "Send message"
+    }
+  },
+  "footer": {
+    "rights": "All Rights Reserved."
+  }
+}

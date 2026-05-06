@@ -11,6 +11,7 @@ export interface SkillCategory {
 }
 
 export interface Project {
+  id: string;
   title: string;
   description: string;
   impact: string;
