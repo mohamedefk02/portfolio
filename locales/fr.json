@@ -142,6 +142,19 @@
           "Mode sombre global et redimensionnement dynamique via ValueNotifier."
         ]
       },
+      "pfa": {
+        "title": "Plateforme d'Audit de Code et d'Analyse Qualité Automatisée",
+        "description": "Plateforme distribuée en microservices (projet de fin d'année) automatisant l'audit technique. Elle clone des dépôts GitHub privés, lance des analyses statiques et de sécurité, puis agrège les résultats. Spring Boot pour l'orchestration et FastAPI (Python) pour l'analyse.",
+        "impact": "Transforme des dépôts bruts en rapports structurés sur la qualité, la sécurité et la maintenabilité, réduisant drastiquement l'effort de revue manuelle.",
+        "highlights": [
+          "Clonage sécurisé de dépôts privés via tokens d'installation dans des volumes Docker isolés par Job ID.",
+          "Génération d'un Manifeste de fichiers JSON capturant extensions, tailles et horodatages.",
+          "Conception d'un suivi de cycle de vie des jobs sous PostgreSQL (pending → running → complete).",
+          "Extension des métriques SonarQube : bugs, vulnérabilités, complexité cognitive, duplications.",
+          "Intégration du service qualité dans un flux d'événements RabbitMQ.",
+          "Orchestration dynamique du SonarScanner via Docker et récupération des résultats via API REST."
+        ]
+      },
       "simple-ecommerce": {
         "title": "Plateforme E-Commerce Simplifiée",
         "description": "Application e-commerce full-stack comprenant un storefront React et une API REST Express avec PostgreSQL. Supporte la navigation, le panier, le paiement et un panel admin sécurisé par JWT.",
@@ -203,20 +216,8 @@
           "Support d'affichage d'images avec Glide et Firebase Storage.",
           "Pages de détails pour les tournois spécialisés (3x3, 5x5, etc.)."
         ]
-      },
-      "pfa": {
-        "title": "Plateforme d'Audit de Code et d'Analyse Qualité Automatisée",
-        "description": "Plateforme distribuée en microservices (projet de fin d'année) automatisant l'audit technique. Elle clone des dépôts GitHub privés, lance des analyses statiques et de sécurité, puis agrège les résultats. Spring Boot pour l'orchestration et FastAPI (Python) pour l'analyse.",
-        "impact": "Transforme des dépôts bruts en rapports structurés sur la qualité, la sécurité et la maintenabilité, réduisant drastiquement l'effort de revue manuelle.",
-        "highlights": [
-          "Clonage sécurisé de dépôts privés via tokens d'installation dans des volumes Docker isolés par Job ID.",
-          "Génération d'un Manifeste de fichiers JSON capturant extensions, tailles et horodatages.",
-          "Conception d'un suivi de cycle de vie des jobs sous PostgreSQL (pending → running → complete).",
-          "Extension des métriques SonarQube : bugs, vulnérabilités, complexité cognitive, duplications.",
-          "Intégration du service qualité dans un flux d'événements RabbitMQ.",
-          "Orchestration dynamique du SonarScanner via Docker et récupération des résultats via API REST."
-        ]
       }
+      
     }
   },
   "not_found": {

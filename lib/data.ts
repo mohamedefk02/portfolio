@@ -78,6 +78,63 @@ const seededProjects: Project[] = [
     type: "mobile",
   },
   {
+    id: "pfa",
+    title: "Automated Code Due Diligence & Quality Analysis Platform",
+    description:
+      "A distributed microservices platform (year-end capstone project) that automates software due diligence by cloning private GitHub repositories, running static and security analysis, and aggregating results into structured reports. It uses Java Spring Boot for orchestration and Python FastAPI for analysis services, with Docker-based isolation and RabbitMQ-driven workflows for asynchronous processing.",
+    impact:
+      "Provides automated technical due diligence by transforming raw repositories into structured insights on code quality, security, and maintainability. It reduces manual review effort by centralizing cloning, analysis, and reporting into an event-driven pipeline with reproducible results.",
+    highlights: [
+      "Implemented secure cloning of private GitHub repositories using installation tokens, storing each repository inside a Docker Volume uniquely named by job ID for full traceability.",
+      "Generated a structured File Manifest JSON per repository, capturing file paths, extensions, sizes, and last modified timestamps for downstream analysis.",
+      "Designed and integrated job lifecycle tracking in PostgreSQL with state transitions (pending → running → complete) ensuring reliable workflow observability.",
+      "Extended SonarQube metrics collection layer to include bugs, vulnerabilities, complexity, cognitive complexity, code smells, duplication rate, and quality gate status.",
+      "Integrated Code Quality Service into RabbitMQ event flow, consuming job_ready messages and publishing enriched job_result payloads after analysis.",
+      "Orchestrated dynamic SonarScanner execution via Docker, mounting repository volumes and retrieving analysis results through SonarQube REST API.",
+    ],
+    techStack: [
+      "Java",
+      "Spring Boot",
+      "Spring Cloud Gateway",
+      "Python",
+      "FastAPI",
+      "RabbitMQ",
+      "PostgreSQL",
+      "Docker",
+      "SonarQube",
+      "SonarScanner",
+      "GitHub API",
+      "JWT",
+      "Tree-sitter",
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Flyway",
+    ],
+    image: "/images/PFA.png",
+    githubUrl: null,
+    isInDevelopment: true,
+    type: "fullstack",
+  },
+  {
+    id: "snapshot-tool",
+    title: "Snapshot Tool - System Process Capture and Restoration",
+    description:
+      "A cross-platform desktop application that captures detailed snapshots of running processes, memory usage, and network connections. It utilizes the psutil library to record system state and provides a PyQt5 interface for managing and restoring workspace environments from JSON-based archives.",
+    impact:
+      "Enables users to preserve and rapidly reconstruct complex application environments, significantly reducing manual setup time after system restarts.",
+    highlights: [
+      "Implemented system-wide process tracking and resource monitoring using the psutil library",
+      "Developed a cross-platform GUI with PyQt5 featuring dynamic directory management for Windows and Unix environments",
+      "Engineered an automated state-capture system with user-configurable intervals using QTimer",
+      "Integrated JSON-based data persistence for portable and human-readable system state storage",
+    ],
+    techStack: ["Python", "PyQt5", "psutil", "JSON"],
+    image: "/images/sptool.png",
+    githubUrl: "https://github.com/mohamedefk02/Snapshot_Recover",
+    type: "desktop",
+  },
+  {
     id: "simple-ecommerce",
     title: "Simple E-Commerce Platform",
     description:
@@ -139,24 +196,7 @@ const seededProjects: Project[] = [
     githubUrl: "https://github.com/mohamedefk02/atlas_guardian_final.git",
     type: "mobile",
   },
-  {
-    id: "snapshot-tool",
-    title: "Snapshot Tool - System Process Capture and Restoration",
-    description:
-      "A cross-platform desktop application that captures detailed snapshots of running processes, memory usage, and network connections. It utilizes the psutil library to record system state and provides a PyQt5 interface for managing and restoring workspace environments from JSON-based archives.",
-    impact:
-      "Enables users to preserve and rapidly reconstruct complex application environments, significantly reducing manual setup time after system restarts.",
-    highlights: [
-      "Implemented system-wide process tracking and resource monitoring using the psutil library",
-      "Developed a cross-platform GUI with PyQt5 featuring dynamic directory management for Windows and Unix environments",
-      "Engineered an automated state-capture system with user-configurable intervals using QTimer",
-      "Integrated JSON-based data persistence for portable and human-readable system state storage",
-    ],
-    techStack: ["Python", "PyQt5", "psutil", "JSON"],
-    image: "/images/sptool.png",
-    githubUrl: "https://github.com/mohamedefk02/Snapshot_Recover",
-    type: "desktop",
-  },
+  
   {
     id: "weball-v2",
     title: "WeBall Match Organizer Android App",
@@ -217,45 +257,7 @@ const seededProjects: Project[] = [
     githubUrl: "https://github.com/mohamedefk02/weball-v1",
     type: "mobile",
   },
-  {
-    id: "pfa",
-    title: "Automated Code Due Diligence & Quality Analysis Platform",
-    description:
-      "A distributed microservices platform (year-end capstone project) that automates software due diligence by cloning private GitHub repositories, running static and security analysis, and aggregating results into structured reports. It uses Java Spring Boot for orchestration and Python FastAPI for analysis services, with Docker-based isolation and RabbitMQ-driven workflows for asynchronous processing.",
-    impact:
-      "Provides automated technical due diligence by transforming raw repositories into structured insights on code quality, security, and maintainability. It reduces manual review effort by centralizing cloning, analysis, and reporting into an event-driven pipeline with reproducible results.",
-    highlights: [
-      "Implemented secure cloning of private GitHub repositories using installation tokens, storing each repository inside a Docker Volume uniquely named by job ID for full traceability.",
-      "Generated a structured File Manifest JSON per repository, capturing file paths, extensions, sizes, and last modified timestamps for downstream analysis.",
-      "Designed and integrated job lifecycle tracking in PostgreSQL with state transitions (pending → running → complete) ensuring reliable workflow observability.",
-      "Extended SonarQube metrics collection layer to include bugs, vulnerabilities, complexity, cognitive complexity, code smells, duplication rate, and quality gate status.",
-      "Integrated Code Quality Service into RabbitMQ event flow, consuming job_ready messages and publishing enriched job_result payloads after analysis.",
-      "Orchestrated dynamic SonarScanner execution via Docker, mounting repository volumes and retrieving analysis results through SonarQube REST API.",
-    ],
-    techStack: [
-      "Java",
-      "Spring Boot",
-      "Spring Cloud Gateway",
-      "Python",
-      "FastAPI",
-      "RabbitMQ",
-      "PostgreSQL",
-      "Docker",
-      "SonarQube",
-      "SonarScanner",
-      "GitHub API",
-      "JWT",
-      "Tree-sitter",
-      "Next.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "Flyway",
-    ],
-    image: "/images/PFA.png",
-    githubUrl: null,
-    isInDevelopment: true,
-    type: "fullstack",
-  },
+  
 ];
 
 const seededSkillCategories: SkillCategory[] = [
