@@ -96,7 +96,7 @@ export function ClientShell({ children }: { children: React.ReactNode }) {
               <i className="bx bxl-github" />
             </a>
             <a
-              href="https://www.linkedin.com/in/mohamed-el-fankari-848826253/"
+              href="https://www.linkedin.com/in/mohamedelfankari/"
               className="icon-secondary"
               target="_blank"
               rel="noreferrer"
