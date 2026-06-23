@@ -241,26 +241,15 @@ export function HomePage({
           <div className="section-spacer" />
 
           <div className="timeline-horizontal">
+            
             <div className="timeline-item">
               <div className="timeline-dot" />
               <div className="timeline-content">
-                <h3>{t("education.schools.high_school.name")}</h3>
+                <h3>{t("education.schools.eniad.name")}</h3>
                 <p>
-                  {t("education.schools.high_school.degree")}
+                  {t("education.schools.eniad.degree")}
                   <br />
-                  <small>{t("education.schools.high_school.date")}</small>
-                </p>
-              </div>
-            </div>
-
-            <div className="timeline-item">
-              <div className="timeline-dot" />
-              <div className="timeline-content">
-                <h3>{t("education.schools.fsjes.name")}</h3>
-                <p>
-                  {t("education.schools.fsjes.degree")}
-                  <br />
-                  <small>{t("education.schools.fsjes.date")}</small>
+                  <small>{t("education.schools.eniad.date")}</small>
                 </p>
               </div>
             </div>
@@ -276,15 +265,27 @@ export function HomePage({
                 </p>
               </div>
             </div>
-
+            
             <div className="timeline-item">
               <div className="timeline-dot" />
               <div className="timeline-content">
-                <h3>{t("education.schools.eniad.name")}</h3>
+                <h3>{t("education.schools.fsjes.name")}</h3>
                 <p>
-                  {t("education.schools.eniad.degree")}
+                  {t("education.schools.fsjes.degree")}
                   <br />
-                  <small>{t("education.schools.eniad.date")}</small>
+                  <small>{t("education.schools.fsjes.date")}</small>
+                </p>
+              </div>
+            </div>
+           
+            <div className="timeline-item">
+              <div className="timeline-dot" />
+              <div className="timeline-content">
+                <h3>{t("education.schools.high_school.name")}</h3>
+                <p>
+                  {t("education.schools.high_school.degree")}
+                  <br />
+                  <small>{t("education.schools.high_school.date")}</small>
                 </p>
               </div>
             </div>

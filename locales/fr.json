@@ -25,10 +25,10 @@
     "title": "Éducation",
     "subtitle": "Le chemin entre « J'aime la tech » et « Laisse-moi vérifier les logs. »",
     "schools": {
-      "high_school": {
-        "name": "Lycée Abtih",
-        "degree": "Baccalauréat, Sciences Physiques - Option Français",
-        "date": "Sep 2020 - Juin 2021"
+      "eniad": {
+        "name": "École Nationale de L'Intelligence Artificielle et du Digital Berkane - ENIAD",
+        "degree": "Diplôme d'Ingénieur d'État en Génie informatique",
+        "date": "Sep 2024 - Présent"
       },
       "est": {
         "name": "École Supérieure de Technologie - EST",
@@ -36,15 +36,16 @@
         "date": "Sep 2022 - Juin 2024"
       },
       "fsjes": {
-        "name": "FSJES",
+        "name": "Faculté des Sciences Juridiques, Economiques et Sociales Marrakech - FSJES",
         "degree": "Première année de Licence en Économie",
         "date": "Sep 2021 - Juin 2022"
       },
-      "eniad": {
-        "name": "ENIAD",
-        "degree": "Diplôme d'Ingénieur d'État en Génie informatique",
-        "date": "Sep 2024 - Présent"
+      "high_school": {
+        "name": "Lycée Abtih",
+        "degree": "Baccalauréat, Sciences Physiques - Option Français",
+        "date": "Sep 2020 - Juin 2021"
       }
+      
     }
   },
   "experience": {
