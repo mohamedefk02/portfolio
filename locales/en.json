@@ -25,10 +25,10 @@
     "title": "Education",
     "subtitle": "The path from \"I like tech\" to \"let me check the logs.\"",
     "schools": {
-      "high_school": {
-        "name": "Abtih High School",
-        "degree": "Baccalaureat, Science Physique - Option Francais",
-        "date": "Sep 2020 - Jun 2021"
+      "eniad": {
+        "name": "National School of Artificial Intelligence and Digital - ENIAD",
+        "degree": "Software Engineering Degree",
+        "date": "Sep 2024 - Present"
       },
       "est": {
         "name": "Higher School of Technology - EST",
@@ -40,11 +40,12 @@
         "degree": "First year in Bachelor in Economy",
         "date": "Sep 2021 - Jun 2022"
       },
-      "eniad": {
-        "name": "ENIAD",
-        "degree": "Software Engineering Degree",
-        "date": "Sep 2024 - Present"
+      "high_school": {
+        "name": "Abtih High School",
+        "degree": "Baccalaureat, Science Physique - Option Francais",
+        "date": "Sep 2020 - Jun 2021"
       }
+      
     }
   },
   "experience": {
