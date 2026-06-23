@@ -1423,21 +1423,33 @@ footer {
   .timeline-horizontal {
     flex-direction: column;
     gap: 2rem;
-    padding: 1rem 0;
+    padding: 1rem 0 1rem 2rem;
+    position: relative;
   }
 
   .timeline-horizontal::before {
-    display: none;
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    background: #bfa46f;
   }
 
   .timeline-item {
     justify-content: flex-start;
+    position: relative;
+    padding-left: 2rem;
   }
 
   .timeline-dot {
-    position: static;
-    transform: none;
-    margin-right: 1rem;
+    position: absolute;
+    left: -13px;
+    top: 4px;
+    width: 16px;
+    height: 16px;
+    margin: 0;
   }
 
   .timeline-content {
