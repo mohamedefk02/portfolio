@@ -142,6 +142,16 @@
           "Applies app-wide dark mode and dynamic text sizing through ValueNotifier-driven theme settings."
         ]
       },
+      "physiological-risk-scoring": {
+        "title": "Physiological Risk Scoring API",
+        "description": "A FastAPI service that classifies stress or suspicious state from wearable physiological signals and returns a risk score in real time.",
+        "impact": "Turns live physiological sensor data into an actionable binary risk score for monitoring or triage.",
+        "highlights": [
+          "Trains and evaluates scikit-learn models with imputation, scaling, and model selection.",
+          "Supports WESAD-based feature extraction from BPM, HRV, and skin temperature windows.",
+          "Includes an ESP32 serial bridge that batches readings and calls the prediction API."
+        ]
+      },
       "pfa": {
         "title": "Automated Code Due Diligence & Quality Analysis Platform",
         "description": "A distributed microservices platform (year-end capstone project) that automates software due diligence by cloning private GitHub repositories, running static and security analysis, and aggregating results into structured reports. It uses Java Spring Boot for orchestration and Python FastAPI for analysis services, with Docker-based isolation and RabbitMQ-driven workflows for asynchronous processing.",
@@ -215,6 +225,39 @@
           "Reservation data stored in Firebase Realtime Database",
           "Profile screen with uploaded avatar support via Firebase Storage and Glide",
           "Tournament detail pages for 3x3 basketball, 5x5 basketball, football, and volleyball"
+        ]
+      },
+      "frankenstein-char-autocomplete": {
+        "title": "Frankenstein Character-Level Autocomplete LSTM",
+        "description": "A simple version of a Keras character-level LSTM that generates text continuations from Frankenstein by encoding characters as one-hot vectors and decoding with greedy or temperature-based sampling.",
+        "impact": "Turns literary text into an interactive autocomplete generator for sequence modeling and creative text synthesis.",
+        "highlights": [
+          "Loads and cleans Project Gutenberg Frankenstein text.",
+          "Builds a char-level vocabulary and uses an LSTM to predict next characters.",
+          "Supports both greedy decoding and temperature-based sampling.",
+          "Uses a separate JSON preprocessing artifact for consistent inference."
+        ]
+      },
+      "english-french-translation-seq2seq": {
+        "title": "English-French Translation Seq2Seq LSTM",
+        "description": "A simple version of a Keras sequence-to-sequence model that translates English sentences to French with a bidirectional encoder and decoder inference pipeline.",
+        "impact": "Converts short English input into French output for demonstration of neural machine translation and language pair modeling.",
+        "highlights": [
+          "Cleans and tokenizes English/French sentence pairs from the fra-eng dataset.",
+          "Builds encoder and decoder inference models from a trained seq2seq LSTM.",
+          "Supports start/end token handling and greedy decoding.",
+          "Stores preprocessing state in a pickle artifact for consistent inference."
+        ]
+      },
+      "ag-news-classification-lstm": {
+        "title": "AG News Topic Classification LSTM",
+        "description": "A simple version of a Keras LSTM classifier that predicts AG News categories from raw text by tokenizing, padding, and mapping predictions to news labels.",
+        "impact": "Turns news headlines/text into actionable topic labels for content routing, analytics, or simple classification demos.",
+        "highlights": [
+          "Loads AG News via TensorFlow Datasets and builds a tokenizer.",
+          "Cleans news text and pads sequences for LSTM input.",
+          "Returns readable category labels with confidence scores.",
+          "Uses separate preprocessing artifacts to preserve tokenizer and class mapping."
         ]
       }
       

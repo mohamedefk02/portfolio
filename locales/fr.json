@@ -142,6 +142,16 @@
           "Mode sombre global et redimensionnement dynamique via ValueNotifier."
         ]
       },
+      "physiological-risk-scoring": {
+        "title": "API de scoring du risque physiologique",
+        "description": "Une API FastAPI qui classe un état de stress ou de suspicion à partir de signaux physiologiques portés et renvoie un score de risque en temps réel.",
+        "impact": "Transforme des données physiologiques en direct en score binaire exploitable pour la supervision ou le triage.",
+        "highlights": [
+          "Entraîne et évalue des modèles scikit-learn avec imputation, normalisation et sélection du meilleur modèle.",
+          "Prend en charge l'extraction de caractéristiques à partir de fenêtres WESAD basées sur la BPM, la VFC et la température cutanée.",
+          "Inclut un pont série ESP32 qui regroupe les mesures et appelle l'API de prédiction."
+        ]
+      },
       "pfa": {
         "title": "Plateforme d'Audit de Code et d'Analyse Qualité Automatisée",
         "description": "Plateforme distribuée en microservices (projet de fin d'année) automatisant l'audit technique. Elle clone des dépôts GitHub privés, lance des analyses statiques et de sécurité, puis agrège les résultats. Spring Boot pour l'orchestration et FastAPI (Python) pour l'analyse.",
@@ -215,6 +225,39 @@
           "Stockage des données en temps réel via Firebase Realtime Database.",
           "Support d'affichage d'images avec Glide et Firebase Storage.",
           "Pages de détails pour les tournois spécialisés (3x3, 5x5, etc.)."
+        ]
+      },
+      "frankenstein-char-autocomplete": {
+        "title": "Générateur d'Autocomplétion au Niveau des Caractères LSTM - Frankenstein",
+        "description": "Une simple version d'un LSTM au niveau des caractères Keras qui génère des continuations de texte à partir de Frankenstein en codant les caractères comme vecteurs one-hot et en décodant avec un échantillonnage greedy ou basé sur la température.",
+        "impact": "Transforme un texte littéraire en générateur interactif d'autocomplétion pour la modélisation de séquences et la synthèse créative de texte.",
+        "highlights": [
+          "Charge et nettoie le texte Frankenstein du Projet Gutenberg.",
+          "Construit un vocabulaire au niveau des caractères et utilise un LSTM pour prédire les caractères suivants.",
+          "Supporte à la fois le décodage greedy et l'échantillonnage basé sur la température.",
+          "Utilise un artefact de prétraitement JSON séparé pour une inférence cohérente."
+        ]
+      },
+      "english-french-translation-seq2seq": {
+        "title": "Modèle de Traduction Anglais-Français Seq2Seq LSTM",
+        "description": "Une simple version d'un modèle sequence-to-sequence Keras qui traduit des phrases anglaises en français avec un encodeur bidirectionnel et un pipeline d'inférence du décodeur.",
+        "impact": "Convertit une entrée anglaise courte en sortie française pour la démonstration de la traduction automatique neuronale et la modélisation des paires de langues.",
+        "highlights": [
+          "Nettoie et tokenise les paires de phrases anglais/français du dataset fra-eng.",
+          "Construit les modèles d'inférence de l'encodeur et du décodeur à partir d'un LSTM seq2seq entraîné.",
+          "Supporte la gestion des jetons de début/fin et le décodage greedy.",
+          "Stocke l'état du prétraitement dans un artefact pickle pour une inférence cohérente."
+        ]
+      },
+      "ag-news-classification-lstm": {
+        "title": "Classificateur de Sujets AG News LSTM",
+        "description": "Une simple version d'un classificateur LSTM Keras qui prédit les catégories AG News à partir de texte brut en tokenisant, remplissant et mappant les prédictions aux labels d'actualité.",
+        "impact": "Transforme les titres/textes d'actualité en labels de sujets exploitables pour le routage de contenu, l'analytique ou des démos de classification simples.",
+        "highlights": [
+          "Charge AG News via TensorFlow Datasets et construit un tokeniseur.",
+          "Nettoie le texte d'actualité et remplit les séquences pour l'entrée LSTM.",
+          "Retourne des labels de catégorie lisibles avec les scores de confiance.",
+          "Utilise des artefacts de prétraitement séparés pour préserver le tokeniseur et le mappage des classes."
         ]
       }
       

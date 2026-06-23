@@ -1,4 +1,4 @@
-export type ProjectType = "mobile" | "desktop" | "fullstack" | "other";
+export type ProjectType = "mobile" | "desktop" | "fullstack" | "other" | "AI/ML";
 
 export interface TechItem {
   name: string;
