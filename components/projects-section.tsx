@@ -8,7 +8,7 @@ import { slugifyTitle } from "@/lib/utils";
 
 import { useTranslation } from "./i18n/language-context";
 
-const filters = ["all", "mobile", "fullstack" , "desktop"] as const;
+const filters = ["all", "mobile", "fullstack" , "desktop", "AI/ML"] as const;
 const PROJECTS_PER_PAGE = 4; // 2 rows with 2 columns
 
 export function ProjectsSection({ projects }: { projects: Project[] }) {
