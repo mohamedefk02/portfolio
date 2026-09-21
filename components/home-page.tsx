@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { useTranslation } from "./i18n/language-context";
 import { ClientShell } from "@/components/client-shell";
 import { ProjectsSection } from "@/components/projects-section";
@@ -88,6 +89,12 @@ function ExperienceSection() {
 
 function ContactSection({ contactStatus }: { contactStatus?: string }) {
   const { t } = useTranslation();
+  const [loadedAt, setLoadedAt] = useState<number>(0);
+
+  useEffect(() => {
+    setLoadedAt(Date.now());
+  }, []);
+
   return (
     <section id="contact" className="section contact-section">
       <h2 className="section-title">{t("contact.title")}</h2>
@@ -119,6 +126,16 @@ function ContactSection({ contactStatus }: { contactStatus?: string }) {
         </div>
 
         <form className="contact-form" action="/contact" method="POST">
+          {/* Layer 1: Honeypot trap fields - hidden from humans */}
+          <div className="visually-hidden-bot" aria-hidden="true">
+            <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" defaultValue="" />
+            <input type="text" name="company_url" tabIndex={-1} autoComplete="off" defaultValue="" />
+            <input type="text" name="website" tabIndex={-1} autoComplete="off" defaultValue="" />
+          </div>
+
+          {/* Layer 2: Time-elapsed guard */}
+          <input type="hidden" name="_timestamp" value={loadedAt} />
+
           <div className="form-group">
             <input type="text" name="name" placeholder={t("contact.form.name")} required />
           </div>

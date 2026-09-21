@@ -21,6 +21,16 @@ body {
   padding-top: var(--nav-height);
 }
 
+.visually-hidden-bot {
+  position: absolute !important;
+  left: -9999px !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
 .timeline-horizontal {
   display: flex;
   justify-content: space-between;

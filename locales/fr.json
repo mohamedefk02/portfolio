@@ -53,6 +53,17 @@
     "subtitle": "Les rôles où j'ai appris en construisant, en réparant et en gérant des problèmes réels.",
     "internships": [
       {
+        "title": "Stagiaire Développeur Backend & IA Appliquée",
+        "company": "Orchid Island Luxury Real Estate",
+        "period": "Juil 2026 - Sep 2026",
+        "mode": "Marrakech",
+        "points": [
+          "Conçu et déployé une plateforme ATS distribuée (6 microservices conteneurisés sous Docker avec Java 21, Spring Boot 3, FastAPI, PostgreSQL et RabbitMQ), réduisant de 78% le temps de traitement des candidatures (de ~10 min en manuel à ~2,2 min en automatique).",
+          "Développé un pipeline d'extraction IA local avec Ollama/Qwen 2.5 7B et un moteur de scoring ATS à 5 facteurs basé sur les embeddings et la similarité cosinus, réduisant d'environ 85% les coûts d'API cloud.",
+          "Automatisé la planification des entretiens via les Webhooks Calendly et sécurisé le routage avec Spring Cloud Gateway + JWT, avec une couverture de tests automatisés (JUnit 5, Pytest) sur les 6 services."
+        ]
+      },
+      {
         "title": "Stagiaire Développeur Mobile",
         "company": "Enjaz COM",
         "period": "Mai 2024 - Juin 2024",
@@ -67,7 +78,7 @@
       {
         "title": "Stagiaire Support Technique",
         "company": "WeQuest",
-        "period": "Juil 2023 - Août 2023",
+        "period": "Juil 2023",
         "mode": "Hybride",
         "points": [
           "Support technique via le diagnostic et la résolution de problèmes logiciels et systèmes",
@@ -108,6 +119,18 @@
     "highlights": "Points Clés",
     "dev_note": "Ce projet est actuellement en développement, le dépôt source n'est donc pas encore public.",
     "items": {
+      "orchid-recruitment-platform": {
+        "title": "Orchid Island - Plateforme de Recrutement & ATS Microservices avec IA",
+        "description": "Plateforme de recrutement distribuée et orientée événements conçue pour automatiser le cycle complet d'acquisition de talents. Développée avec 6 microservices Java Spring Boot, un service IA/NLP Python FastAPI, Next.js 14, MinIO S3 et RabbitMQ, elle propose un parsing de CV via LLM local respectant la confidentialité et un classement mathématique objectif des candidats.",
+        "impact": "Suppression des goulots d'étranglement du tri manuel des CV avec une réduction de plus de 80% du temps de traitement, garantie de 100% de souveraineté des données grâce à l'inférence locale Ollama, et unification du pipeline de recrutement jusqu'à l'ERP.",
+        "highlights": [
+          "Architecture de 6 microservices Spring Boot (API Gateway, Auth avec RBAC, Recrutement, Évaluation ATS, Entretiens, Notifications) orchestrés via Docker Compose.",
+          "Intégration d'inférence LLM locale avec Ollama (qwen2.5:7b) et providers alternatifs (Gemini, OpenAI) pour une extraction de CV sans fuite de données validée par Pydantic.",
+          "Création d'un moteur d'évaluation ATS mathématique pondéré combinant compétences, expérience, diplômes et langues avec réglages par département.",
+          "Mise en œuvre d'un pipeline d'événements asynchrones RabbitMQ et stockage MinIO S3 pour l'ingestion massive de CV et l'envoi d'emails transactionnels.",
+          "Synchronisation bidirectionnelle des webhooks Calendly pour la planification automatique d'entretiens et intégration ERP Collabix pour l'onboarding."
+        ]
+      },
       "quiz-master": {
         "title": "Quiz Master - App de Quiz IA avec Apprentissage Interactif",
         "description": "Quiz Master est une application full-stack (Flutter & Django) qui génère des quiz à partir de textes ou de PDF, gère les données utilisateurs et suit leur progression. Ma contribution s'est focalisée sur l'expérience de jeu : flux de session interactive, révision post-quiz, retours sur résultats et import de quiz via JSON local.",

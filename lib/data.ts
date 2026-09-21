@@ -2,6 +2,43 @@ import type { Project, SkillCategory } from "@/lib/types";
 
 const seededProjects: Project[] = [
   {
+    id: "orchid-recruitment-platform",
+    title: "Orchid Island - AI-Powered ATS & Microservices Recruitment Platform",
+    description:
+      "An enterprise-grade, event-driven recruitment platform designed to automate end-to-end talent acquisition. Built with 6 Java Spring Boot microservices, a Python FastAPI AI/NLP service, Next.js 14 frontend, MinIO S3, and RabbitMQ, it features privacy-preserving local LLM CV parsing and objective mathematical ATS candidate ranking.",
+    impact:
+      "Eliminated manual resume screening bottlenecks with >80% time reduction, ensured 100% candidate data privacy through local Ollama inference, and unified the hiring lifecycle from application to ERP onboarding.",
+    highlights: [
+      "Engineered 6 Spring Boot microservices (API Gateway, Auth with RBAC, Recruitment, ATS Scoring, Interview Lifecycle, Notifications) orchestrated via Docker Compose.",
+      "Integrated local LLM inference via Ollama (qwen2.5:7b) and fallback providers (Gemini, OpenAI) for zero-data-leakage CV extraction with Pydantic validation.",
+      "Developed a weighted mathematical ATS scoring engine evaluating skills, experience, education, and language match with customizable department weights.",
+      "Implemented event-driven asynchronous processing via RabbitMQ and MinIO S3 for high-throughput batch CV ingestion and email notifications.",
+      "Integrated bidirectional Calendly webhooks for automated interview scheduling and Collabix ERP integration for hired candidates.",
+    ],
+    techStack: [
+      "Java",
+      "Spring Boot",
+      "Spring Cloud Gateway",
+      "Python",
+      "FastAPI",
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "RabbitMQ",
+      "PostgreSQL",
+      "Docker",
+      "Docker Compose",
+      "MinIO",
+      "Ollama",
+      "Pydantic",
+      "PyMuPDF",
+    ],
+    image: "/images/PFA.png",
+    githubUrl: null,
+    isInDevelopment: false,
+    type: "fullstack",
+  },
+  {
     id: "quiz-master",
     title: "Quiz Master - AI Quiz App with Interactive Learning Features",
     description:
